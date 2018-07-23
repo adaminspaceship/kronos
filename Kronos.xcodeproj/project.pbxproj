@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99D80D2521064A1000716921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D2421064A1000716921 /* AppDelegate.swift */; };
+		99D80D2721064A1000716921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D2621064A1000716921 /* ViewController.swift */; };
+		99D80D2A21064A1000716921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2821064A1000716921 /* Main.storyboard */; };
+		99D80D2C21064A1100716921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2B21064A1100716921 /* Assets.xcassets */; };
+		99D80D2F21064A1100716921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2D21064A1100716921 /* LaunchScreen.storyboard */; };
+		99D80D3A21064A1100716921 /* KronosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D3921064A1100716921 /* KronosTests.swift */; };
+		99D80D4521064A1100716921 /* KronosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D4421064A1100716921 /* KronosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99D80D3621064A1100716921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99D80D1921064A1000716921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99D80D2021064A1000716921;
+			remoteInfo = Kronos;
+		};
+		99D80D4121064A1100716921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99D80D1921064A1000716921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99D80D2021064A1000716921;
+			remoteInfo = Kronos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99D80D2121064A1000716921 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D80D2421064A1000716921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99D80D2621064A1000716921 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99D80D2921064A1000716921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99D80D2B21064A1100716921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99D80D2E21064A1100716921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99D80D3021064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99D80D3521064A1100716921 /* KronosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KronosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D80D3921064A1100716921 /* KronosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KronosTests.swift; sourceTree = "<group>"; };
+		99D80D3B21064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99D80D4021064A1100716921 /* KronosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KronosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D80D4421064A1100716921 /* KronosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KronosUITests.swift; sourceTree = "<group>"; };
+		99D80D4621064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99D80D1E21064A1000716921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3221064A1100716921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3D21064A1100716921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99D80D1821064A1000716921 = {
+			isa = PBXGroup;
+			children = (
+				99D80D2321064A1000716921 /* Kronos */,
+				99D80D3821064A1100716921 /* KronosTests */,
+				99D80D4321064A1100716921 /* KronosUITests */,
+				99D80D2221064A1000716921 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99D80D2221064A1000716921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99D80D2121064A1000716921 /* Kronos.app */,
+				99D80D3521064A1100716921 /* KronosTests.xctest */,
+				99D80D4021064A1100716921 /* KronosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99D80D2321064A1000716921 /* Kronos */ = {
+			isa = PBXGroup;
+			children = (
+				99D80D2421064A1000716921 /* AppDelegate.swift */,
+				99D80D2621064A1000716921 /* ViewController.swift */,
+				99D80D2821064A1000716921 /* Main.storyboard */,
+				99D80D2B21064A1100716921 /* Assets.xcassets */,
+				99D80D2D21064A1100716921 /* LaunchScreen.storyboard */,
+				99D80D3021064A1100716921 /* Info.plist */,
+			);
+			path = Kronos;
+			sourceTree = "<group>";
+		};
+		99D80D3821064A1100716921 /* KronosTests */ = {
+			isa = PBXGroup;
+			children = (
+				99D80D3921064A1100716921 /* KronosTests.swift */,
+				99D80D3B21064A1100716921 /* Info.plist */,
+			);
+			path = KronosTests;
+			sourceTree = "<group>";
+		};
+		99D80D4321064A1100716921 /* KronosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99D80D4421064A1100716921 /* KronosUITests.swift */,
+				99D80D4621064A1100716921 /* Info.plist */,
+			);
+			path = KronosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99D80D2021064A1000716921 /* Kronos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D80D4921064A1100716921 /* Build configuration list for PBXNativeTarget "Kronos" */;
+			buildPhases = (
+				99D80D1D21064A1000716921 /* Sources */,
+				99D80D1E21064A1000716921 /* Frameworks */,
+				99D80D1F21064A1000716921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kronos;
+			productName = Kronos;
+			productReference = 99D80D2121064A1000716921 /* Kronos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99D80D3421064A1100716921 /* KronosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D80D4C21064A1100716921 /* Build configuration list for PBXNativeTarget "KronosTests" */;
+			buildPhases = (
+				99D80D3121064A1100716921 /* Sources */,
+				99D80D3221064A1100716921 /* Frameworks */,
+				99D80D3321064A1100716921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99D80D3721064A1100716921 /* PBXTargetDependency */,
+			);
+			name = KronosTests;
+			productName = KronosTests;
+			productReference = 99D80D3521064A1100716921 /* KronosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99D80D3F21064A1100716921 /* KronosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D80D4F21064A1100716921 /* Build configuration list for PBXNativeTarget "KronosUITests" */;
+			buildPhases = (
+				99D80D3C21064A1100716921 /* Sources */,
+				99D80D3D21064A1100716921 /* Frameworks */,
+				99D80D3E21064A1100716921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99D80D4221064A1100716921 /* PBXTargetDependency */,
+			);
+			name = KronosUITests;
+			productName = KronosUITests;
+			productReference = 99D80D4021064A1100716921 /* KronosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99D80D1921064A1000716921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = adameliezerov;
+				TargetAttributes = {
+					99D80D2021064A1000716921 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					99D80D3421064A1100716921 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 99D80D2021064A1000716921;
+					};
+					99D80D3F21064A1100716921 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 99D80D2021064A1000716921;
+					};
+				};
+			};
+			buildConfigurationList = 99D80D1C21064A1000716921 /* Build configuration list for PBXProject "Kronos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99D80D1821064A1000716921;
+			productRefGroup = 99D80D2221064A1000716921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99D80D2021064A1000716921 /* Kronos */,
+				99D80D3421064A1100716921 /* KronosTests */,
+				99D80D3F21064A1100716921 /* KronosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99D80D1F21064A1000716921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D80D2F21064A1100716921 /* LaunchScreen.storyboard in Resources */,
+				99D80D2C21064A1100716921 /* Assets.xcassets in Resources */,
+				99D80D2A21064A1000716921 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3321064A1100716921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3E21064A1100716921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99D80D1D21064A1000716921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D80D2721064A1000716921 /* ViewController.swift in Sources */,
+				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3121064A1100716921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D80D3A21064A1100716921 /* KronosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D80D3C21064A1100716921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D80D4521064A1100716921 /* KronosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99D80D3721064A1100716921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99D80D2021064A1000716921 /* Kronos */;
+			targetProxy = 99D80D3621064A1100716921 /* PBXContainerItemProxy */;
+		};
+		99D80D4221064A1100716921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99D80D2021064A1000716921 /* Kronos */;
+			targetProxy = 99D80D4121064A1100716921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99D80D2821064A1000716921 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99D80D2921064A1000716921 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99D80D2D21064A1100716921 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99D80D2E21064A1100716921 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99D80D4721064A1100716921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99D80D4821064A1100716921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99D80D4A21064A1100716921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = Kronos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.Kronos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99D80D4B21064A1100716921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = Kronos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.Kronos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99D80D4D21064A1100716921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = KronosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.KronosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kronos.app/Kronos";
+			};
+			name = Debug;
+		};
+		99D80D4E21064A1100716921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = KronosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.KronosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kronos.app/Kronos";
+			};
+			name = Release;
+		};
+		99D80D5021064A1100716921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = KronosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.KronosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kronos;
+			};
+			name = Debug;
+		};
+		99D80D5121064A1100716921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z28CSUK723;
+				INFOPLIST_FILE = KronosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.KronosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kronos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99D80D1C21064A1000716921 /* Build configuration list for PBXProject "Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D80D4721064A1100716921 /* Debug */,
+				99D80D4821064A1100716921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D80D4921064A1100716921 /* Build configuration list for PBXNativeTarget "Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D80D4A21064A1100716921 /* Debug */,
+				99D80D4B21064A1100716921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D80D4C21064A1100716921 /* Build configuration list for PBXNativeTarget "KronosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D80D4D21064A1100716921 /* Debug */,
+				99D80D4E21064A1100716921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D80D4F21064A1100716921 /* Build configuration list for PBXNativeTarget "KronosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99D80D5021064A1100716921 /* Debug */,
+				99D80D5121064A1100716921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99D80D1921064A1000716921 /* Project object */;
+}

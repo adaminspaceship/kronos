@@ -8,32 +8,55 @@
 
 import UIKit
 import MKRingProgressView
+import CoreData
+import UIColor_Hex_Swift
+import Spring
 
 class OtherViewController: UIViewController {
-    
+	@IBOutlet weak var startButtonTapped: UIButton!
+	
+	let colorsCombos = ["#0DFFD2":"#0CE881","#0DAFFF":"#00FFC9","#FF0D42":"#E100FF","#FF850D":"#FF3400"]
+	var selectedWorkout = Workout()
     var ringProgressView = RingProgressView()
-    
+    let subView = SpringView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        ringProgressView = RingProgressView(frame: CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-300, width: 350, height: 350))
-        
-        ringProgressView.startColor = .black
-        ringProgressView.endColor = .red
-        ringProgressView.ringWidth = 10
+		
+		subView.frame = CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-250, width: 350, height: 350)
+		
+        ringProgressView = RingProgressView(frame: CGRect(x: subView.frame.size.width/2-175, y: subView.frame.size.height/2-200, width: 350, height: 350))
+		let index: Int = Int(arc4random_uniform(UInt32(colorsCombos.count)))
+		let randomValColor = UIColor(Array(colorsCombos.values)[index])
+		let randomKeyColor = UIColor(Array(colorsCombos.keys)[index])
+		ringProgressView.startColor = randomKeyColor
+		ringProgressView.endColor = randomValColor
+        ringProgressView.ringWidth = 25
         ringProgressView.progress = 0.0
-        ringProgressView.style = .round
+        ringProgressView.backgroundRingColor = UIColor.black
         ringProgressView.shadowOpacity = 0
-        view.addSubview(ringProgressView)
+		view.addSubview(subView)
+		subView.addSubview(ringProgressView)
+		if randomValColor.isLight {
+			startButtonTapped.setTitleColor(.black, for: .normal)
+		} else {
+			startButtonTapped.setTitleColor(.white, for: .normal)
+		}
+		startButtonTapped.layer.cornerRadius = 25
+		startButtonTapped.setGradientBackground(colorOne: randomKeyColor, colorTwo: randomValColor)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-       
-        
+		
     }
     
-    
+	@IBAction func startButton(_ sender: Any) {
+		
+		
+		animation(duration: Double(selectedWorkout.secondsPerSet))
+		print(selectedWorkout.secondsPerSet)
+	}
+	
     func animation(duration: Double) {
         UIView.animate(withDuration: TimeInterval(duration/20*7.5),delay: 0,options: .curveLinear , animations: {
             self.ringProgressView.progress = 0.25
@@ -52,15 +75,6 @@ class OtherViewController: UIViewController {
         }
         
         
-    }
-    
-    @IBAction func buttonTapped(_ sender: Any) {
-        guard let button = sender as? UIButton else {
-            return
-        }
-        animation(duration: Double(button.tag))
-        
-
     }
     
 }

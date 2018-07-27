@@ -1,0 +1,1638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0156A887961822855CBA4170E1343209 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A1CC6365D59FC37FDF249CC500C52 /* DesignableLabel.swift */; };
+		0E0C680B0879C8426EECD877EF1EFAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		0E992D851C548E4598B9AB55A8F2278D /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F3B7CDEC86E38144F1A86F0D4CBFF /* DesignableButton.swift */; };
+		0ECC96DC0A521F4B207716E0D0A0CA88 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506BE7E0A29D628AFDDC3B1F644EA /* TransitionZoom.swift */; };
+		10243701DC88C8AA9C695D5E201822D4 /* Pods-KronosUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F2433EA66E39525D568C8FC516891F /* Pods-KronosUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20BB6DCFCA3F8E9366B80DD5E70F904D /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE848B4CE691F756A72B18AF2446B4 /* DesignableTabBarController.swift */; };
+		227AE2D657300AC8B42376B5BBF35F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		267E766AE7D0C80852E8B4B0C537BAD7 /* Pods-Kronos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A0EA22C2D5161CFFB7BB80F5C80325 /* Pods-Kronos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B8F20BF7DD41AB20EEDD9D5B260EAB5 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9EFB4E8ED5E8C52D855E56E0C62043E /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40149C1F753727C88F9216B6574B77E5 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28398284E131232079B5A2CDB07B68 /* AsyncImageView.swift */; };
+		46D6EDCC3863759FA1DEE3D94DABD89A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		4D6AA3E72BC5AB5074F5F8337C4D2818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		4E1EBCF2EB73299CDD9A4FAE1CC1AC73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE71E1299F51F1760C2019A6932F5B59 /* Images.xcassets */; };
+		4E2B8D1546590C225121E61EC16D36F8 /* MKRingProgressView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8188FC6C1A79B943DF3E14DC831E4587 /* MKRingProgressView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F2BAC5B48B1F7DA34038C7CD10AD07F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F224AE1FC7BBB3B1E64FC0E248CF638 /* ImageLoader.swift */; };
+		585EE4B67DEAB5AEE0F9AFE92560487E /* MKRingProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF4F0B04A70F7018AD4AFF49CCA8EF /* MKRingProgressView-dummy.m */; };
+		5A1420E86D244A85DEBBFC92649074FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		5A4D3953069794DC6EFB065F503A8C6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		5C2A6CA14731F2AB0166415921AFB985 /* MKGradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872FA1B247D0E9AAD56BD3B851FEBDD6 /* MKGradientGenerator.swift */; };
+		6614790C729DF87A3C2CD29441404B09 /* MKRingProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0050E7D2BF1DE6DC8101ED3C56BE2 /* MKRingProgressLayer.swift */; };
+		66EDEAEE68AD2FC081EFCE0086F1F3BF /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E865AB57EFC8E1FB7CE39A71B884D6 /* SpringAnimation.swift */; };
+		691EA841539E5B6807D1A571E9C7CF2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		6AC8EAD1377654AB4241037A30C04D14 /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C05BCCEE4EA7F88AFDF3D099BA47E1 /* Spring-dummy.m */; };
+		7197BB369D2FEEB660B3BC607A5AC330 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A47613E3139ECD99F611B90D7145A /* SpinerLayer.swift */; };
+		7486CBF65DD28DFD1826C67E50B69947 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C131F49D68A309236B69069AE61A9AF /* UIColorExtension.swift */; };
+		7699EAF40365314C5B0428850B5051DD /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E8FA845A1F6E70F5E71AC8D751D660 /* FadeTransition.swift */; };
+		7847873A15A29C5C7198D1A555ED94A2 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED7BCA8AD238CB4EFB8A501EB6A32C /* CGRectExtension.swift */; };
+		79384F623FABD8C63A1DBF1906569F11 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C64A36182EC16BED5358810739B6EA /* LoadingView.xib */; };
+		81D0447283694C7AA3489579E200ECFD /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369AF80E6043A37677FFB7B93280908F /* DesignableTextView.swift */; };
+		85997DB9D371987694EC072A526A82EB /* UIColor_Hex_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D808F422451F0DEF27AE72D9DE3FB4E /* UIColor_Hex_Swift-dummy.m */; };
+		89D96A54A28382BAF7FEB50C8E20BD12 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D50FA0789BAF1348FD2D5C46DAF5C1 /* AsyncButton.swift */; };
+		8E9544E22514762AA34BD009B3340323 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DC6F122B7D9B04AA26111E5A4B599 /* Misc.swift */; };
+		9446DDB9A642B367212664733D6A4227 /* MKRingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A337F76B36FA13CD90C0EB7E0A1C2 /* MKRingProgressView.swift */; };
+		972E56ED4B9C15072A63C3646F84EDFC /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = C677E0290CAC2ADD292E97F36036799C /* Spring.swift */; };
+		9BB2ADB7DE3E60306A0D8B79415A86F0 /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19B058817AAC3FF5A7D3B4C227D447FD /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F17C321360A710B99DB0D88EDD6A04F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		A442BB1CC8605D34264B7E4EA5A2C806 /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783735D6E3C1550BC46E38F86D7118D8 /* CustomTransitionViewController.swift */; };
+		A79F8EAAC160E5BF0FB2C73192394E98 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD685A9CD83A276071D103172DDD4BA /* UnwindSegue.swift */; };
+		A9CFEC867AB13D73BD67D632E0159913 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D38A8F5F2F0DC0C5DCF8169FC2FDE8 /* DesignableView.swift */; };
+		AC8C72B078DEB93932D327BD3BFF8121 /* TransitionButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B17F96F51D8BC994AE35555CBB6AD1 /* TransitionButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B420E03604C828C8F6C7CBF153F00185 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8820431F8CAB1A8D6832B37FC445E5 /* KeyboardLayoutConstraint.swift */; };
+		BA1F6890721ED1AFE2619480A36E9C79 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C54978654B64DCC2FDB104CBE60C9 /* SpringImageView.swift */; };
+		BC194B543175FA5CC18D3020F9F6473F /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C8DF20805D3C15373FF02ACC80957 /* SpringTextView.swift */; };
+		C146FBF038FA28A4B7839BDDE697C0F8 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B14C8AB427E0CFE354A71CF40898 /* AutoTextView.swift */; };
+		C6FBCCDDFF4116688C09F7735FF28B5F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E52EBB8531A768EF588A619CA267E9 /* LoadingView.swift */; };
+		C9AC455F0A7FDDA79918CAE7EE587859 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA82845C1969221CE7A961BFFC9A8A /* BlurView.swift */; };
+		CB4BCF87A3625059FDDE6B9E87CAC99B /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16642532CEFD871D3EDE80DD12C43240 /* SpringLabel.swift */; };
+		D05E79261D5614DC342838634CD8C195 /* Pods-Kronos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5795B1D2AE570DDA0F354337AD418B /* Pods-Kronos-dummy.m */; };
+		D23101AC2A9CCFE15F7C44D7C09B1E58 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437C6FAFDF2809AC07F44A02621E193 /* DesignableTextField.swift */; };
+		D57D6F84E358D961D2D2CE2F2FD099AD /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314E3C87A56938AAC46977AC004B9C6D /* TransitionButton.swift */; };
+		DC6E1547F3B79647341B01F9D7DB657A /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093EC72B32745FAB66ECFA727E3D4CB /* SpringTextField.swift */; };
+		DDFF0FD55AA01BF81E4E8B60BC19672C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		DF9872800401F1F27AACB80769A27AC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		E339D34E81DAAD614668FC915BC67C99 /* Pods-KronosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C98F3C131E6FAE97527D943CA666ED4 /* Pods-KronosTests-dummy.m */; };
+		E49885D3E91681BDD8300C8FA8FD99BE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9506E614AD715CB0A6629973CB477921 /* SoundPlayer.swift */; };
+		E6E1AFBF109A085B58A9B7251864FCFD /* Pods-KronosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B62888D400A5962705FA846BA7305F6 /* Pods-KronosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F03B327D87498E69CAEC526885A8ED /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266004A6D10E92B01528D67B6688E42 /* TransitionManager.swift */; };
+		F41FBC5A676EAF8F2DB9BF177809E3F5 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C81B1F3E243F606B75C048C0BE0604C /* DesignableImageView.swift */; };
+		F4D22575EA822B06F43DA52A3F48AC15 /* Pods-KronosUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FCF250C3716717E664587C4E9ABDE0 /* Pods-KronosUITests-dummy.m */; };
+		F6344362B7B62F5CF2E7BF58C9E996E3 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBE98B6C67CA529FB8CB3034B49BE /* SpringView.swift */; };
+		F913BDACC5B605A748E7572EABD14335 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40743B1480B5465FA4F7BA3F482EF8EB /* SpringButton.swift */; };
+		FBC9AE6F75CC22AA6D9B50F498694B1C /* UIColor_Hex_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC70037E3C6A82E67D24C0B9CF5A80B /* UIColor_Hex_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC0C6C640FE5C1FD37CF50BEB85F2C8 /* TransitionButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D2B63CD29F2390D4E73313B40C89CB /* TransitionButton-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FB423419059E5B5A5E463E70F5B1F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83C244FAEEB6CA98BBFE8B1669BB0F99;
+			remoteInfo = TransitionButton;
+		};
+		71C393E2B5F5E24DBF04423D60780EF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7865EAF6E298CB47F9A8DD8400A699D1;
+			remoteInfo = "Pods-Kronos";
+		};
+		A65DCED50EC6CD8DE2A93EB8C35C8E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7865EAF6E298CB47F9A8DD8400A699D1;
+			remoteInfo = "Pods-Kronos";
+		};
+		B83FFD9CBA6FBB8087E41F53BF53DBAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 274F35F2135D6FF71582D443D84227CD;
+			remoteInfo = MKRingProgressView;
+		};
+		D55884DDDB39A568D5DF3BF1A3824D9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A7459D7A3C0579FF078ABCC962B5DA;
+			remoteInfo = Spring;
+		};
+		DE60E9BED0C9F4AAFE98DB674793505E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EAF812300FF5C57B132F0DFFA94EFC7;
+			remoteInfo = UIColor_Hex_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04B2B14C8AB427E0CFE354A71CF40898 /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		071F3B7CDEC86E38144F1A86F0D4CBFF /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		0C9C8DF20805D3C15373FF02ACC80957 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		0EB2227335A5E75D273F00B383303802 /* Pods-KronosUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KronosUITests-resources.sh"; sourceTree = "<group>"; };
+		0F3C54978654B64DCC2FDB104CBE60C9 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		0F57731327F28AA20E6A5EA5DE7ABEB5 /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		13F8AC5701329FA5850F7A9DA6864194 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1437C6FAFDF2809AC07F44A02621E193 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		15E8FA845A1F6E70F5E71AC8D751D660 /* FadeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Source/FadeTransition.swift; sourceTree = "<group>"; };
+		16642532CEFD871D3EDE80DD12C43240 /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		17C05BCCEE4EA7F88AFDF3D099BA47E1 /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		19B058817AAC3FF5A7D3B4C227D447FD /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		1C131F49D68A309236B69069AE61A9AF /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = HEXColor/UIColorExtension.swift; sourceTree = "<group>"; };
+		1C81B1F3E243F606B75C048C0BE0604C /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		1CFA82845C1969221CE7A961BFFC9A8A /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		1D808F422451F0DEF27AE72D9DE3FB4E /* UIColor_Hex_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor_Hex_Swift-dummy.m"; sourceTree = "<group>"; };
+		1DC28F16E1E5E91121779E34866B4928 /* MKRingProgressView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MKRingProgressView.modulemap; sourceTree = "<group>"; };
+		1F224AE1FC7BBB3B1E64FC0E248CF638 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		20C64A36182EC16BED5358810739B6EA /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		21AF4E2A1367C3FD9BC1D5A84414640D /* Pods_Kronos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kronos.framework; path = "Pods-Kronos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B62888D400A5962705FA846BA7305F6 /* Pods-KronosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KronosTests-umbrella.h"; sourceTree = "<group>"; };
+		2C37AAB9D7DA935256E86D20C8B68226 /* Pods-Kronos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kronos.release.xcconfig"; sourceTree = "<group>"; };
+		314E3C87A56938AAC46977AC004B9C6D /* TransitionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionButton.swift; path = Source/TransitionButton.swift; sourceTree = "<group>"; };
+		33C5DDA758F9713FEB68DBB277FB6FEE /* Pods-KronosTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KronosTests-frameworks.sh"; sourceTree = "<group>"; };
+		360506BE7E0A29D628AFDDC3B1F644EA /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		369AF80E6043A37677FFB7B93280908F /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		390FD4CA621198FE1F6F95D488D4C4CE /* UIColor_Hex_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIColor_Hex_Swift.modulemap; sourceTree = "<group>"; };
+		40743B1480B5465FA4F7BA3F482EF8EB /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		431A246D82D47D0E8008E2FDE8AA63AD /* Pods-Kronos-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kronos-resources.sh"; sourceTree = "<group>"; };
+		43CE848B4CE691F756A72B18AF2446B4 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		451971E5B41D874D31AB41B08E402C69 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D6D160839153FCA2ADC861A1088BBA /* Pods_KronosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KronosUITests.framework; path = "Pods-KronosUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B483BA810FE0E8E3E80D7862B51BDCD /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE780C6762A71214C186C5FDFEBB27F /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Spring.modulemap; sourceTree = "<group>"; };
+		5093EC72B32745FAB66ECFA727E3D4CB /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		50A16E1CA5C796CF261940B8147B41CE /* Pods-Kronos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kronos-frameworks.sh"; sourceTree = "<group>"; };
+		50E52EBB8531A768EF588A619CA267E9 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		57D50FA0789BAF1348FD2D5C46DAF5C1 /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		63131F476075D4980903A75C977CF2D9 /* TransitionButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TransitionButton.modulemap; sourceTree = "<group>"; };
+		686A337F76B36FA13CD90C0EB7E0A1C2 /* MKRingProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKRingProgressView.swift; path = MKRingProgressView/MKRingProgressView.swift; sourceTree = "<group>"; };
+		7514F1152672A641EE6C800C464A1F33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F2433EA66E39525D568C8FC516891F /* Pods-KronosUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KronosUITests-umbrella.h"; sourceTree = "<group>"; };
+		783735D6E3C1550BC46E38F86D7118D8 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomTransitionViewController.swift; path = Source/CustomTransitionViewController.swift; sourceTree = "<group>"; };
+		7C15825CB3E8D268215DC571F1D0A1B3 /* Pods-KronosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KronosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C98F3C131E6FAE97527D943CA666ED4 /* Pods-KronosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KronosTests-dummy.m"; sourceTree = "<group>"; };
+		7C9A1CC6365D59FC37FDF249CC500C52 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		7DD685A9CD83A276071D103172DDD4BA /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		7F6A134B86FA74BA1BC3583793685A92 /* MKRingProgressView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKRingProgressView.xcconfig; sourceTree = "<group>"; };
+		7F90AF1CFBD6103183F91EFC4D166DC5 /* Pods-KronosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KronosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8188FC6C1A79B943DF3E14DC831E4587 /* MKRingProgressView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKRingProgressView-umbrella.h"; sourceTree = "<group>"; };
+		842A078554C0D2F70CA2F2523EEDE4F3 /* MKRingProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKRingProgressView.framework; path = MKRingProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E865AB57EFC8E1FB7CE39A71B884D6 /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		872FA1B247D0E9AAD56BD3B851FEBDD6 /* MKGradientGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKGradientGenerator.swift; path = MKRingProgressView/MKGradientGenerator.swift; sourceTree = "<group>"; };
+		88E1E427485BD1AFB3524C702D8B6584 /* UIColor_Hex_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIColor_Hex_Swift.framework; path = UIColor_Hex_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A96758B2ECB8E880A9F44168D5FFE9E /* Pods-KronosUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KronosUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8D460BA58DA01F4AAFBB4997942313B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EDF4F0B04A70F7018AD4AFF49CCA8EF /* MKRingProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKRingProgressView-dummy.m"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		90C9B563803F7CBD88C08B501241C9CA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92B17F96F51D8BC994AE35555CBB6AD1 /* TransitionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionButton-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9506E614AD715CB0A6629973CB477921 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		9516ADE41E859BFA6447151637297D47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9574B4490B0C6C28C3852C45F68852BC /* Pods-KronosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KronosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EC70037E3C6A82E67D24C0B9CF5A80B /* UIColor_Hex_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-umbrella.h"; sourceTree = "<group>"; };
+		9F46BD28DEE3BB44A5D4EBB0B1E57D19 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		A3A0EA22C2D5161CFFB7BB80F5C80325 /* Pods-Kronos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kronos-umbrella.h"; sourceTree = "<group>"; };
+		A732D0F58F637C85001B8FE9B00C049C /* MKRingProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKRingProgressView-prefix.pch"; sourceTree = "<group>"; };
+		A8FCF250C3716717E664587C4E9ABDE0 /* Pods-KronosUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KronosUITests-dummy.m"; sourceTree = "<group>"; };
+		A9D38A8F5F2F0DC0C5DCF8169FC2FDE8 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		AC3AE6ED50898432545F308086C2ACCF /* Pods-KronosUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KronosUITests.modulemap"; sourceTree = "<group>"; };
+		AF8DC6F122B7D9B04AA26111E5A4B599 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		B08111745F0A8E72ED7FF83F6C020A76 /* Pods-Kronos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kronos.modulemap"; sourceTree = "<group>"; };
+		B14A16F8D0F94B372890775A52F1E725 /* TransitionButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TransitionButton.framework; path = TransitionButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1F4B7F37047AAAF50A43ACDE21D423B /* Pods-KronosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KronosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B3B13CF17C9C97998850BBF9A2950448 /* Pods-KronosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KronosTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB5795B1D2AE570DDA0F354337AD418B /* Pods-Kronos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kronos-dummy.m"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC4060D261EB71CBB02D48A5F73CC795 /* Pods-KronosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KronosTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BE32D453A1842D95FB5B6C162757257C /* UIColor_Hex_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIColor_Hex_Swift.xcconfig; sourceTree = "<group>"; };
+		C677E0290CAC2ADD292E97F36036799C /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		C95639F95DADD3149F88D5280EBB198C /* Pods_KronosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KronosTests.framework; path = "Pods-KronosTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EFB4E8ED5E8C52D855E56E0C62043E /* HEXColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HEXColor.h; path = HEXColor/HEXColor.h; sourceTree = "<group>"; };
+		CB881EE3255832985827C358155AA806 /* TransitionButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionButton-prefix.pch"; sourceTree = "<group>"; };
+		CB9DCB639AE918320944BF4A0C7E0E84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE71E1299F51F1760C2019A6932F5B59 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		CF2571A380C3E1A9EFE2E6A7EEA5B2B1 /* TransitionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionButton.xcconfig; sourceTree = "<group>"; };
+		CF9D55817B2E257E17F96D8667D4C4B7 /* Pods-Kronos-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kronos-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D22677FB8D51946B53936DDE5BED63A1 /* Pods-Kronos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kronos.debug.xcconfig"; sourceTree = "<group>"; };
+		D266004A6D10E92B01528D67B6688E42 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		D5ED7BCA8AD238CB4EFB8A501EB6A32C /* CGRectExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRectExtension.swift; path = Source/CGRectExtension.swift; sourceTree = "<group>"; };
+		D6D0050E7D2BF1DE6DC8101ED3C56BE2 /* MKRingProgressLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKRingProgressLayer.swift; path = MKRingProgressView/MKRingProgressLayer.swift; sourceTree = "<group>"; };
+		DA8681B57CCA7AB5AFF61170B3C09712 /* Pods-KronosUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KronosUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD28398284E131232079B5A2CDB07B68 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		DE6A47613E3139ECD99F611B90D7145A /* SpinerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinerLayer.swift; path = Source/SpinerLayer.swift; sourceTree = "<group>"; };
+		E330981FB8CE192067F9D41C4D3A9824 /* Pods-KronosUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KronosUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E3ECF1899F4544D623D6BD5DF6941470 /* Pods-KronosTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KronosTests-resources.sh"; sourceTree = "<group>"; };
+		E6D2B63CD29F2390D4E73313B40C89CB /* TransitionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionButton-dummy.m"; sourceTree = "<group>"; };
+		EBEC140A187F61963FE0A3B003828F6F /* Pods-KronosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KronosTests.modulemap"; sourceTree = "<group>"; };
+		ED54378274B8C2F0FAC6D61ADB93E7E9 /* UIColor_Hex_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-prefix.pch"; sourceTree = "<group>"; };
+		ED8820431F8CAB1A8D6832B37FC445E5 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		F8B6FEF53189F6C6AA78436A25189E35 /* Pods-Kronos-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kronos-acknowledgements.plist"; sourceTree = "<group>"; };
+		FA7EBE98B6C67CA529FB8CB3034B49BE /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E880E6A2097A3514AA1E1E62CB0E2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDFF0FD55AA01BF81E4E8B60BC19672C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C6B83104C7919FDF5200C89D943E565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46D6EDCC3863759FA1DEE3D94DABD89A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A8D007A6E72EEFC5C6EB3CE5409C1FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227AE2D657300AC8B42376B5BBF35F79 /* Foundation.framework in Frameworks */,
+				691EA841539E5B6807D1A571E9C7CF2B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4EB6892AF571DF4D46F149E8B955A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4D3953069794DC6EFB065F503A8C6A /* Foundation.framework in Frameworks */,
+				DF9872800401F1F27AACB80769A27AC5 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFB90814FCC8FB67BE9AA61D53B1A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D6AA3E72BC5AB5074F5F8337C4D2818 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C3AC6DD5EC7851A4BEE7FB7AB8A4A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E0C680B0879C8426EECD877EF1EFAA3 /* Foundation.framework in Frameworks */,
+				5A1420E86D244A85DEBBFC92649074FE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0C81A76D52627971CB6077024F407F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F17C321360A710B99DB0D88EDD6A04F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		092F09F299AA0E1A427B8569D13A1B1B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90C9B563803F7CBD88C08B501241C9CA /* Info.plist */,
+				63131F476075D4980903A75C977CF2D9 /* TransitionButton.modulemap */,
+				CF2571A380C3E1A9EFE2E6A7EEA5B2B1 /* TransitionButton.xcconfig */,
+				E6D2B63CD29F2390D4E73313B40C89CB /* TransitionButton-dummy.m */,
+				CB881EE3255832985827C358155AA806 /* TransitionButton-prefix.pch */,
+				92B17F96F51D8BC994AE35555CBB6AD1 /* TransitionButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TransitionButton";
+			sourceTree = "<group>";
+		};
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		23B3A7BAF301EA26D53FD684F624D073 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F6FF7D8B49B7DC444A20E7102E1C5 /* MKRingProgressView */,
+				FD99CA226C565F9B0D16A701FEF40B16 /* Spring */,
+				9E339FB876413958FF123CC7A01F9853 /* TransitionButton */,
+				272F5720C04067D36D4CCC753489B91F /* UIColor_Hex_Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		272F5720C04067D36D4CCC753489B91F /* UIColor_Hex_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C9EFB4E8ED5E8C52D855E56E0C62043E /* HEXColor.h */,
+				1C131F49D68A309236B69069AE61A9AF /* UIColorExtension.swift */,
+				BF83749706DADB4448BDED2CC035FD56 /* Support Files */,
+			);
+			name = UIColor_Hex_Swift;
+			path = UIColor_Hex_Swift;
+			sourceTree = "<group>";
+		};
+		28263BEA5A6C007ABB5EB26B5EF2EBC9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				451971E5B41D874D31AB41B08E402C69 /* Info.plist */,
+				1DC28F16E1E5E91121779E34866B4928 /* MKRingProgressView.modulemap */,
+				7F6A134B86FA74BA1BC3583793685A92 /* MKRingProgressView.xcconfig */,
+				8EDF4F0B04A70F7018AD4AFF49CCA8EF /* MKRingProgressView-dummy.m */,
+				A732D0F58F637C85001B8FE9B00C049C /* MKRingProgressView-prefix.pch */,
+				8188FC6C1A79B943DF3E14DC831E4587 /* MKRingProgressView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKRingProgressView";
+			sourceTree = "<group>";
+		};
+		2FE3F18C06D846727604654756806620 /* Pods-Kronos */ = {
+			isa = PBXGroup;
+			children = (
+				9516ADE41E859BFA6447151637297D47 /* Info.plist */,
+				B08111745F0A8E72ED7FF83F6C020A76 /* Pods-Kronos.modulemap */,
+				CF9D55817B2E257E17F96D8667D4C4B7 /* Pods-Kronos-acknowledgements.markdown */,
+				F8B6FEF53189F6C6AA78436A25189E35 /* Pods-Kronos-acknowledgements.plist */,
+				BB5795B1D2AE570DDA0F354337AD418B /* Pods-Kronos-dummy.m */,
+				50A16E1CA5C796CF261940B8147B41CE /* Pods-Kronos-frameworks.sh */,
+				431A246D82D47D0E8008E2FDE8AA63AD /* Pods-Kronos-resources.sh */,
+				A3A0EA22C2D5161CFFB7BB80F5C80325 /* Pods-Kronos-umbrella.h */,
+				D22677FB8D51946B53936DDE5BED63A1 /* Pods-Kronos.debug.xcconfig */,
+				2C37AAB9D7DA935256E86D20C8B68226 /* Pods-Kronos.release.xcconfig */,
+			);
+			name = "Pods-Kronos";
+			path = "Target Support Files/Pods-Kronos";
+			sourceTree = "<group>";
+		};
+		4177F5C1A7C7102B1737992395052B86 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE71E1299F51F1760C2019A6932F5B59 /* Images.xcassets */,
+				20C64A36182EC16BED5358810739B6EA /* LoadingView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				23B3A7BAF301EA26D53FD684F624D073 /* Pods */,
+				87DF004ADF57A23D3AD1A84FB1BD1252 /* Products */,
+				E04F6DA01FA6D098902394CAD6DC95C7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		87DF004ADF57A23D3AD1A84FB1BD1252 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842A078554C0D2F70CA2F2523EEDE4F3 /* MKRingProgressView.framework */,
+				21AF4E2A1367C3FD9BC1D5A84414640D /* Pods_Kronos.framework */,
+				C95639F95DADD3149F88D5280EBB198C /* Pods_KronosTests.framework */,
+				45D6D160839153FCA2ADC861A1088BBA /* Pods_KronosUITests.framework */,
+				4B483BA810FE0E8E3E80D7862B51BDCD /* Spring.framework */,
+				B14A16F8D0F94B372890775A52F1E725 /* TransitionButton.framework */,
+				88E1E427485BD1AFB3524C702D8B6584 /* UIColor_Hex_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E339FB876413958FF123CC7A01F9853 /* TransitionButton */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED7BCA8AD238CB4EFB8A501EB6A32C /* CGRectExtension.swift */,
+				783735D6E3C1550BC46E38F86D7118D8 /* CustomTransitionViewController.swift */,
+				15E8FA845A1F6E70F5E71AC8D751D660 /* FadeTransition.swift */,
+				DE6A47613E3139ECD99F611B90D7145A /* SpinerLayer.swift */,
+				314E3C87A56938AAC46977AC004B9C6D /* TransitionButton.swift */,
+				092F09F299AA0E1A427B8569D13A1B1B /* Support Files */,
+			);
+			name = TransitionButton;
+			path = TransitionButton;
+			sourceTree = "<group>";
+		};
+		AB209D89C21F63884C8AF148EE1B857A /* Pods-KronosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7514F1152672A641EE6C800C464A1F33 /* Info.plist */,
+				AC3AE6ED50898432545F308086C2ACCF /* Pods-KronosUITests.modulemap */,
+				DA8681B57CCA7AB5AFF61170B3C09712 /* Pods-KronosUITests-acknowledgements.markdown */,
+				8A96758B2ECB8E880A9F44168D5FFE9E /* Pods-KronosUITests-acknowledgements.plist */,
+				A8FCF250C3716717E664587C4E9ABDE0 /* Pods-KronosUITests-dummy.m */,
+				E330981FB8CE192067F9D41C4D3A9824 /* Pods-KronosUITests-frameworks.sh */,
+				0EB2227335A5E75D273F00B383303802 /* Pods-KronosUITests-resources.sh */,
+				75F2433EA66E39525D568C8FC516891F /* Pods-KronosUITests-umbrella.h */,
+				7C15825CB3E8D268215DC571F1D0A1B3 /* Pods-KronosUITests.debug.xcconfig */,
+				B1F4B7F37047AAAF50A43ACDE21D423B /* Pods-KronosUITests.release.xcconfig */,
+			);
+			name = "Pods-KronosUITests";
+			path = "Target Support Files/Pods-KronosUITests";
+			sourceTree = "<group>";
+		};
+		AD1F6FF7D8B49B7DC444A20E7102E1C5 /* MKRingProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				872FA1B247D0E9AAD56BD3B851FEBDD6 /* MKGradientGenerator.swift */,
+				D6D0050E7D2BF1DE6DC8101ED3C56BE2 /* MKRingProgressLayer.swift */,
+				686A337F76B36FA13CD90C0EB7E0A1C2 /* MKRingProgressView.swift */,
+				28263BEA5A6C007ABB5EB26B5EF2EBC9 /* Support Files */,
+			);
+			name = MKRingProgressView;
+			path = MKRingProgressView;
+			sourceTree = "<group>";
+		};
+		B68E3A17D965C14D05D0562E6748BB52 /* Pods-KronosTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D460BA58DA01F4AAFBB4997942313B5 /* Info.plist */,
+				EBEC140A187F61963FE0A3B003828F6F /* Pods-KronosTests.modulemap */,
+				7F90AF1CFBD6103183F91EFC4D166DC5 /* Pods-KronosTests-acknowledgements.markdown */,
+				BC4060D261EB71CBB02D48A5F73CC795 /* Pods-KronosTests-acknowledgements.plist */,
+				7C98F3C131E6FAE97527D943CA666ED4 /* Pods-KronosTests-dummy.m */,
+				33C5DDA758F9713FEB68DBB277FB6FEE /* Pods-KronosTests-frameworks.sh */,
+				E3ECF1899F4544D623D6BD5DF6941470 /* Pods-KronosTests-resources.sh */,
+				2B62888D400A5962705FA846BA7305F6 /* Pods-KronosTests-umbrella.h */,
+				9574B4490B0C6C28C3852C45F68852BC /* Pods-KronosTests.debug.xcconfig */,
+				B3B13CF17C9C97998850BBF9A2950448 /* Pods-KronosTests.release.xcconfig */,
+			);
+			name = "Pods-KronosTests";
+			path = "Target Support Files/Pods-KronosTests";
+			sourceTree = "<group>";
+		};
+		BF83749706DADB4448BDED2CC035FD56 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB9DCB639AE918320944BF4A0C7E0E84 /* Info.plist */,
+				390FD4CA621198FE1F6F95D488D4C4CE /* UIColor_Hex_Swift.modulemap */,
+				BE32D453A1842D95FB5B6C162757257C /* UIColor_Hex_Swift.xcconfig */,
+				1D808F422451F0DEF27AE72D9DE3FB4E /* UIColor_Hex_Swift-dummy.m */,
+				ED54378274B8C2F0FAC6D61ADB93E7E9 /* UIColor_Hex_Swift-prefix.pch */,
+				9EC70037E3C6A82E67D24C0B9CF5A80B /* UIColor_Hex_Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor_Hex_Swift";
+			sourceTree = "<group>";
+		};
+		D11E55A45FCACFF08C5D73D2F6F84801 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13F8AC5701329FA5850F7A9DA6864194 /* Info.plist */,
+				4FE780C6762A71214C186C5FDFEBB27F /* Spring.modulemap */,
+				9F46BD28DEE3BB44A5D4EBB0B1E57D19 /* Spring.xcconfig */,
+				17C05BCCEE4EA7F88AFDF3D099BA47E1 /* Spring-dummy.m */,
+				0F57731327F28AA20E6A5EA5DE7ABEB5 /* Spring-prefix.pch */,
+				19B058817AAC3FF5A7D3B4C227D447FD /* Spring-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
+			sourceTree = "<group>";
+		};
+		E04F6DA01FA6D098902394CAD6DC95C7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3F18C06D846727604654756806620 /* Pods-Kronos */,
+				B68E3A17D965C14D05D0562E6748BB52 /* Pods-KronosTests */,
+				AB209D89C21F63884C8AF148EE1B857A /* Pods-KronosUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FD99CA226C565F9B0D16A701FEF40B16 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				57D50FA0789BAF1348FD2D5C46DAF5C1 /* AsyncButton.swift */,
+				DD28398284E131232079B5A2CDB07B68 /* AsyncImageView.swift */,
+				04B2B14C8AB427E0CFE354A71CF40898 /* AutoTextView.swift */,
+				1CFA82845C1969221CE7A961BFFC9A8A /* BlurView.swift */,
+				071F3B7CDEC86E38144F1A86F0D4CBFF /* DesignableButton.swift */,
+				1C81B1F3E243F606B75C048C0BE0604C /* DesignableImageView.swift */,
+				7C9A1CC6365D59FC37FDF249CC500C52 /* DesignableLabel.swift */,
+				43CE848B4CE691F756A72B18AF2446B4 /* DesignableTabBarController.swift */,
+				1437C6FAFDF2809AC07F44A02621E193 /* DesignableTextField.swift */,
+				369AF80E6043A37677FFB7B93280908F /* DesignableTextView.swift */,
+				A9D38A8F5F2F0DC0C5DCF8169FC2FDE8 /* DesignableView.swift */,
+				1F224AE1FC7BBB3B1E64FC0E248CF638 /* ImageLoader.swift */,
+				ED8820431F8CAB1A8D6832B37FC445E5 /* KeyboardLayoutConstraint.swift */,
+				50E52EBB8531A768EF588A619CA267E9 /* LoadingView.swift */,
+				AF8DC6F122B7D9B04AA26111E5A4B599 /* Misc.swift */,
+				9506E614AD715CB0A6629973CB477921 /* SoundPlayer.swift */,
+				C677E0290CAC2ADD292E97F36036799C /* Spring.swift */,
+				84E865AB57EFC8E1FB7CE39A71B884D6 /* SpringAnimation.swift */,
+				40743B1480B5465FA4F7BA3F482EF8EB /* SpringButton.swift */,
+				0F3C54978654B64DCC2FDB104CBE60C9 /* SpringImageView.swift */,
+				16642532CEFD871D3EDE80DD12C43240 /* SpringLabel.swift */,
+				5093EC72B32745FAB66ECFA727E3D4CB /* SpringTextField.swift */,
+				0C9C8DF20805D3C15373FF02ACC80957 /* SpringTextView.swift */,
+				FA7EBE98B6C67CA529FB8CB3034B49BE /* SpringView.swift */,
+				D266004A6D10E92B01528D67B6688E42 /* TransitionManager.swift */,
+				360506BE7E0A29D628AFDDC3B1F644EA /* TransitionZoom.swift */,
+				7DD685A9CD83A276071D103172DDD4BA /* UnwindSegue.swift */,
+				4177F5C1A7C7102B1737992395052B86 /* Resources */,
+				D11E55A45FCACFF08C5D73D2F6F84801 /* Support Files */,
+			);
+			name = Spring;
+			path = Spring;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C9C3BDCA76FDFCDD1C6DD53ACD5F80D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267E766AE7D0C80852E8B4B0C537BAD7 /* Pods-Kronos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCBA72DA5229B2B581CE928DF71320C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10243701DC88C8AA9C695D5E201822D4 /* Pods-KronosUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B6D718852E0845B122F55F3CFF9938 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2B8D1546590C225121E61EC16D36F8 /* MKRingProgressView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBB2F8A2858E5AB826A352870E0F588 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E1AFBF109A085B58A9B7251864FCFD /* Pods-KronosTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FACD09C17485831FFEFF1F778C906D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8F20BF7DD41AB20EEDD9D5B260EAB5 /* HEXColor.h in Headers */,
+				FBC9AE6F75CC22AA6D9B50F498694B1C /* UIColor_Hex_Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E60CDDF004AF93EE1C562B3927C2594 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8C72B078DEB93932D327BD3BFF8121 /* TransitionButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FCE1743A4E56ECEDB14FA0A354F80F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB2ADB7DE3E60306A0D8B79415A86F0 /* Spring-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15A7459D7A3C0579FF078ABCC962B5DA /* Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B078C54D4BBD052351EFEE73E4967542 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildPhases = (
+				E4A8DCD23BC561F070FB9293958F16CA /* Sources */,
+				ACFB90814FCC8FB67BE9AA61D53B1A4F /* Frameworks */,
+				7F0F8778B7A377296EB4C3220320DD0C /* Resources */,
+				F4FCE1743A4E56ECEDB14FA0A354F80F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spring;
+			productName = Spring;
+			productReference = 4B483BA810FE0E8E3E80D7862B51BDCD /* Spring.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		274F35F2135D6FF71582D443D84227CD /* MKRingProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D11250D08C5DB85407D80C433F3BB39E /* Build configuration list for PBXNativeTarget "MKRingProgressView" */;
+			buildPhases = (
+				8D684FF1F4C1B5F040F2C3E10615625D /* Sources */,
+				B7C3AC6DD5EC7851A4BEE7FB7AB8A4A0 /* Frameworks */,
+				69B6D718852E0845B122F55F3CFF9938 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKRingProgressView;
+			productName = MKRingProgressView;
+			productReference = 842A078554C0D2F70CA2F2523EEDE4F3 /* MKRingProgressView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A73C66BFD8C34D2326044EADBFBFDFB /* Pods-KronosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D323A6C8BF32D7EFADBE95C9868229A6 /* Build configuration list for PBXNativeTarget "Pods-KronosTests" */;
+			buildPhases = (
+				0E423E4E703C954CE3D5BE59A614363F /* Sources */,
+				E0C81A76D52627971CB6077024F407F7 /* Frameworks */,
+				6EBB2F8A2858E5AB826A352870E0F588 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6793EEBE670E1A154EA6E8E311AF9C33 /* PBXTargetDependency */,
+			);
+			name = "Pods-KronosTests";
+			productName = "Pods-KronosTests";
+			productReference = C95639F95DADD3149F88D5280EBB198C /* Pods_KronosTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2EAF812300FF5C57B132F0DFFA94EFC7 /* UIColor_Hex_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2A04225A64FD7C474FBA601877233CA /* Build configuration list for PBXNativeTarget "UIColor_Hex_Swift" */;
+			buildPhases = (
+				50C06D0D9D4C6E0AC6501E03232E1BCA /* Sources */,
+				6A8D007A6E72EEFC5C6EB3CE5409C1FA /* Frameworks */,
+				6FACD09C17485831FFEFF1F778C906D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIColor_Hex_Swift;
+			productName = UIColor_Hex_Swift;
+			productReference = 88E1E427485BD1AFB3524C702D8B6584 /* UIColor_Hex_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7865EAF6E298CB47F9A8DD8400A699D1 /* Pods-Kronos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B134687882EB4D2D65E3DC5B9F2D0A2 /* Build configuration list for PBXNativeTarget "Pods-Kronos" */;
+			buildPhases = (
+				C1C8F6820DB37FE22928E466D55C00EE /* Sources */,
+				3C6B83104C7919FDF5200C89D943E565 /* Frameworks */,
+				1C9C3BDCA76FDFCDD1C6DD53ACD5F80D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB5D30F1430575515C78CDAA2A6131EA /* PBXTargetDependency */,
+				2631D1367340B07E42024F2A64206ABD /* PBXTargetDependency */,
+				C935EBCB30B45B905E34C0114E764F64 /* PBXTargetDependency */,
+				AA5FBF1743F48FE407A460D8B21FF839 /* PBXTargetDependency */,
+			);
+			name = "Pods-Kronos";
+			productName = "Pods-Kronos";
+			productReference = 21AF4E2A1367C3FD9BC1D5A84414640D /* Pods_Kronos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		83C244FAEEB6CA98BBFE8B1669BB0F99 /* TransitionButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BCFA7A9770119B280F952A77A713D2 /* Build configuration list for PBXNativeTarget "TransitionButton" */;
+			buildPhases = (
+				9A3E26BE4EC7501BE778AFED6E87A349 /* Sources */,
+				6C4EB6892AF571DF4D46F149E8B955A8 /* Frameworks */,
+				7E60CDDF004AF93EE1C562B3927C2594 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransitionButton;
+			productName = TransitionButton;
+			productReference = B14A16F8D0F94B372890775A52F1E725 /* TransitionButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9AF1E6A6463E9083CC212D965F14A73F /* Pods-KronosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDE2F923DF6F2E0E9C49CC9B772A129D /* Build configuration list for PBXNativeTarget "Pods-KronosUITests" */;
+			buildPhases = (
+				DC26D8F18BAC085D09935A00EB007186 /* Sources */,
+				0E880E6A2097A3514AA1E1E62CB0E2D0 /* Frameworks */,
+				4BCBA72DA5229B2B581CE928DF71320C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF12CA8A43439165DFA948CBEA0136AB /* PBXTargetDependency */,
+			);
+			name = "Pods-KronosUITests";
+			productName = "Pods-KronosUITests";
+			productReference = 45D6D160839153FCA2ADC861A1088BBA /* Pods_KronosUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 87DF004ADF57A23D3AD1A84FB1BD1252 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				274F35F2135D6FF71582D443D84227CD /* MKRingProgressView */,
+				7865EAF6E298CB47F9A8DD8400A699D1 /* Pods-Kronos */,
+				2A73C66BFD8C34D2326044EADBFBFDFB /* Pods-KronosTests */,
+				9AF1E6A6463E9083CC212D965F14A73F /* Pods-KronosUITests */,
+				15A7459D7A3C0579FF078ABCC962B5DA /* Spring */,
+				83C244FAEEB6CA98BBFE8B1669BB0F99 /* TransitionButton */,
+				2EAF812300FF5C57B132F0DFFA94EFC7 /* UIColor_Hex_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F0F8778B7A377296EB4C3220320DD0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E1EBCF2EB73299CDD9A4FAE1CC1AC73 /* Images.xcassets in Resources */,
+				79384F623FABD8C63A1DBF1906569F11 /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E423E4E703C954CE3D5BE59A614363F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E339D34E81DAAD614668FC915BC67C99 /* Pods-KronosTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C06D0D9D4C6E0AC6501E03232E1BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85997DB9D371987694EC072A526A82EB /* UIColor_Hex_Swift-dummy.m in Sources */,
+				7486CBF65DD28DFD1826C67E50B69947 /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D684FF1F4C1B5F040F2C3E10615625D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2A6CA14731F2AB0166415921AFB985 /* MKGradientGenerator.swift in Sources */,
+				6614790C729DF87A3C2CD29441404B09 /* MKRingProgressLayer.swift in Sources */,
+				585EE4B67DEAB5AEE0F9AFE92560487E /* MKRingProgressView-dummy.m in Sources */,
+				9446DDB9A642B367212664733D6A4227 /* MKRingProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3E26BE4EC7501BE778AFED6E87A349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7847873A15A29C5C7198D1A555ED94A2 /* CGRectExtension.swift in Sources */,
+				A442BB1CC8605D34264B7E4EA5A2C806 /* CustomTransitionViewController.swift in Sources */,
+				7699EAF40365314C5B0428850B5051DD /* FadeTransition.swift in Sources */,
+				7197BB369D2FEEB660B3BC607A5AC330 /* SpinerLayer.swift in Sources */,
+				FCC0C6C640FE5C1FD37CF50BEB85F2C8 /* TransitionButton-dummy.m in Sources */,
+				D57D6F84E358D961D2D2CE2F2FD099AD /* TransitionButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C8F6820DB37FE22928E466D55C00EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05E79261D5614DC342838634CD8C195 /* Pods-Kronos-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC26D8F18BAC085D09935A00EB007186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D22575EA822B06F43DA52A3F48AC15 /* Pods-KronosUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4A8DCD23BC561F070FB9293958F16CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D96A54A28382BAF7FEB50C8E20BD12 /* AsyncButton.swift in Sources */,
+				40149C1F753727C88F9216B6574B77E5 /* AsyncImageView.swift in Sources */,
+				C146FBF038FA28A4B7839BDDE697C0F8 /* AutoTextView.swift in Sources */,
+				C9AC455F0A7FDDA79918CAE7EE587859 /* BlurView.swift in Sources */,
+				0E992D851C548E4598B9AB55A8F2278D /* DesignableButton.swift in Sources */,
+				F41FBC5A676EAF8F2DB9BF177809E3F5 /* DesignableImageView.swift in Sources */,
+				0156A887961822855CBA4170E1343209 /* DesignableLabel.swift in Sources */,
+				20BB6DCFCA3F8E9366B80DD5E70F904D /* DesignableTabBarController.swift in Sources */,
+				D23101AC2A9CCFE15F7C44D7C09B1E58 /* DesignableTextField.swift in Sources */,
+				81D0447283694C7AA3489579E200ECFD /* DesignableTextView.swift in Sources */,
+				A9CFEC867AB13D73BD67D632E0159913 /* DesignableView.swift in Sources */,
+				4F2BAC5B48B1F7DA34038C7CD10AD07F /* ImageLoader.swift in Sources */,
+				B420E03604C828C8F6C7CBF153F00185 /* KeyboardLayoutConstraint.swift in Sources */,
+				C6FBCCDDFF4116688C09F7735FF28B5F /* LoadingView.swift in Sources */,
+				8E9544E22514762AA34BD009B3340323 /* Misc.swift in Sources */,
+				E49885D3E91681BDD8300C8FA8FD99BE /* SoundPlayer.swift in Sources */,
+				6AC8EAD1377654AB4241037A30C04D14 /* Spring-dummy.m in Sources */,
+				972E56ED4B9C15072A63C3646F84EDFC /* Spring.swift in Sources */,
+				66EDEAEE68AD2FC081EFCE0086F1F3BF /* SpringAnimation.swift in Sources */,
+				F913BDACC5B605A748E7572EABD14335 /* SpringButton.swift in Sources */,
+				BA1F6890721ED1AFE2619480A36E9C79 /* SpringImageView.swift in Sources */,
+				CB4BCF87A3625059FDDE6B9E87CAC99B /* SpringLabel.swift in Sources */,
+				DC6E1547F3B79647341B01F9D7DB657A /* SpringTextField.swift in Sources */,
+				BC194B543175FA5CC18D3020F9F6473F /* SpringTextView.swift in Sources */,
+				F6344362B7B62F5CF2E7BF58C9E996E3 /* SpringView.swift in Sources */,
+				E6F03B327D87498E69CAEC526885A8ED /* TransitionManager.swift in Sources */,
+				0ECC96DC0A521F4B207716E0D0A0CA88 /* TransitionZoom.swift in Sources */,
+				A79F8EAAC160E5BF0FB2C73192394E98 /* UnwindSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2631D1367340B07E42024F2A64206ABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 15A7459D7A3C0579FF078ABCC962B5DA /* Spring */;
+			targetProxy = D55884DDDB39A568D5DF3BF1A3824D9A /* PBXContainerItemProxy */;
+		};
+		6793EEBE670E1A154EA6E8E311AF9C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kronos";
+			target = 7865EAF6E298CB47F9A8DD8400A699D1 /* Pods-Kronos */;
+			targetProxy = A65DCED50EC6CD8DE2A93EB8C35C8E79 /* PBXContainerItemProxy */;
+		};
+		AA5FBF1743F48FE407A460D8B21FF839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIColor_Hex_Swift;
+			target = 2EAF812300FF5C57B132F0DFFA94EFC7 /* UIColor_Hex_Swift */;
+			targetProxy = DE60E9BED0C9F4AAFE98DB674793505E /* PBXContainerItemProxy */;
+		};
+		C935EBCB30B45B905E34C0114E764F64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TransitionButton;
+			target = 83C244FAEEB6CA98BBFE8B1669BB0F99 /* TransitionButton */;
+			targetProxy = 2FB423419059E5B5A5E463E70F5B1F93 /* PBXContainerItemProxy */;
+		};
+		CB5D30F1430575515C78CDAA2A6131EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MKRingProgressView;
+			target = 274F35F2135D6FF71582D443D84227CD /* MKRingProgressView */;
+			targetProxy = B83FFD9CBA6FBB8087E41F53BF53DBAC /* PBXContainerItemProxy */;
+		};
+		FF12CA8A43439165DFA948CBEA0136AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kronos";
+			target = 7865EAF6E298CB47F9A8DD8400A699D1 /* Pods-Kronos */;
+			targetProxy = 71C393E2B5F5E24DBF04423D60780EF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F8839B5D8286AFE91FC916D2F0DD599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1F4B7F37047AAAF50A43ACDE21D423B /* Pods-KronosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KronosUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KronosUITests/Pods-KronosUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25A28D5D4C3AB4A71F9618C4AA31FF98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B13CF17C9C97998850BBF9A2950448 /* Pods-KronosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KronosTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KronosTests/Pods-KronosTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		322465800ED36C5156A6F228616B2ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22677FB8D51946B53936DDE5BED63A1 /* Pods-Kronos.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kronos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kronos/Pods-Kronos.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C97900C771713B71528F1B7867806E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6A134B86FA74BA1BC3583793685A92 /* MKRingProgressView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MKRingProgressView/MKRingProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MKRingProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MKRingProgressView/MKRingProgressView.modulemap";
+				PRODUCT_MODULE_NAME = MKRingProgressView;
+				PRODUCT_NAME = MKRingProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		481662CA3F2F7D43C3A3C482FABEF463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F46BD28DEE3BB44A5D4EBB0B1E57D19 /* Spring.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				PRODUCT_MODULE_NAME = Spring;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50FC19D74DF86515632389FCF29FF961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF2571A380C3E1A9EFE2E6A7EEA5B2B1 /* TransitionButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionButton/TransitionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TransitionButton/TransitionButton.modulemap";
+				PRODUCT_MODULE_NAME = TransitionButton;
+				PRODUCT_NAME = TransitionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7F04C4037AFF4D8591AEB7A633A09F98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C37AAB9D7DA935256E86D20C8B68226 /* Pods-Kronos.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kronos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kronos/Pods-Kronos.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8169DAE283BD9CDCF1D9E0F7FAFD39F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C15825CB3E8D268215DC571F1D0A1B3 /* Pods-KronosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KronosUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KronosUITests/Pods-KronosUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8539ACA0CD2623D4EDA3438E13730781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF2571A380C3E1A9EFE2E6A7EEA5B2B1 /* TransitionButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionButton/TransitionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TransitionButton/TransitionButton.modulemap";
+				PRODUCT_MODULE_NAME = TransitionButton;
+				PRODUCT_NAME = TransitionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		980B5C41E28AE255CF168E2AF3B83CD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9574B4490B0C6C28C3852C45F68852BC /* Pods-KronosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KronosTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KronosTests/Pods-KronosTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A590863ED7EDDBCBA64F6C53BEC1B361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE32D453A1842D95FB5B6C162757257C /* UIColor_Hex_Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C4CD90646E4C5F2497E0B13D4CD89096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6A134B86FA74BA1BC3583793685A92 /* MKRingProgressView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MKRingProgressView/MKRingProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MKRingProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MKRingProgressView/MKRingProgressView.modulemap";
+				PRODUCT_MODULE_NAME = MKRingProgressView;
+				PRODUCT_NAME = MKRingProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D22B839DD48363ADD71F8F186C28B0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE32D453A1842D95FB5B6C162757257C /* UIColor_Hex_Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE33D8CBBDEF4B6EBFB5AE7974C7DB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F46BD28DEE3BB44A5D4EBB0B1E57D19 /* Spring.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				PRODUCT_MODULE_NAME = Spring;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BCFA7A9770119B280F952A77A713D2 /* Build configuration list for PBXNativeTarget "TransitionButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50FC19D74DF86515632389FCF29FF961 /* Debug */,
+				8539ACA0CD2623D4EDA3438E13730781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B134687882EB4D2D65E3DC5B9F2D0A2 /* Build configuration list for PBXNativeTarget "Pods-Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322465800ED36C5156A6F228616B2ADC /* Debug */,
+				7F04C4037AFF4D8591AEB7A633A09F98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B078C54D4BBD052351EFEE73E4967542 /* Build configuration list for PBXNativeTarget "Spring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				481662CA3F2F7D43C3A3C482FABEF463 /* Debug */,
+				DE33D8CBBDEF4B6EBFB5AE7974C7DB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D11250D08C5DB85407D80C433F3BB39E /* Build configuration list for PBXNativeTarget "MKRingProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CD90646E4C5F2497E0B13D4CD89096 /* Debug */,
+				3C97900C771713B71528F1B7867806E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D323A6C8BF32D7EFADBE95C9868229A6 /* Build configuration list for PBXNativeTarget "Pods-KronosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980B5C41E28AE255CF168E2AF3B83CD6 /* Debug */,
+				25A28D5D4C3AB4A71F9618C4AA31FF98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2A04225A64FD7C474FBA601877233CA /* Build configuration list for PBXNativeTarget "UIColor_Hex_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22B839DD48363ADD71F8F186C28B0C3 /* Debug */,
+				A590863ED7EDDBCBA64F6C53BEC1B361 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDE2F923DF6F2E0E9C49CC9B772A129D /* Build configuration list for PBXNativeTarget "Pods-KronosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8169DAE283BD9CDCF1D9E0F7FAFD39F9 /* Debug */,
+				0F8839B5D8286AFE91FC916D2F0DD599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

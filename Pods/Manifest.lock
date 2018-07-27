@@ -1,0 +1,36 @@
+PODS:
+  - MKRingProgressView (2.0.1)
+  - Spring (1.0.5)
+  - TransitionButton (0.4.0)
+  - UIColor_Hex_Swift (4.0.1)
+
+DEPENDENCIES:
+  - MKRingProgressView
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - TransitionButton
+  - UIColor_Hex_Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MKRingProgressView
+    - TransitionButton
+    - UIColor_Hex_Swift
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: c540239f3590bbaf4a35c3959c329dd5ed4e3eee
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  MKRingProgressView: a2adeddfff0ea03f0fb7f8b108f3f77176db3bb5
+  Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  TransitionButton: d271030914c84a00b54b4d983446944d2875e7ba
+  UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
+
+PODFILE CHECKSUM: b46b14baed5757fe6d52d848b73e06f76926f6e8
+
+COCOAPODS: 1.5.3

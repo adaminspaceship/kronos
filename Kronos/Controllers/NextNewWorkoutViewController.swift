@@ -7,29 +7,47 @@
 //
 
 import UIKit
+import CoreData
 
 class NextNewWorkoutViewController: UIViewController {
-
+	
+	var setCountLabel = Int()
+	var workoutName = String()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		workoutNameField.text = workoutName
+		self.hideKeyboardWhenTappedAround()
+		secondsPerSetField.becomeFirstResponder()
+		
     }
-
+	@IBOutlet weak var secondsPerSetField: UITextField!
+	
+	@IBOutlet weak var workoutNameField: UITextField!
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	let workout = CoreDataHelper.newWorkout()
     
+	@IBAction func doneButtonTapped(_ sender: Any) {
 
-    /*
-    // MARK: - Navigation
+		
+		workout.exerciseName = workoutName
+		workout.numberOfSets = Int32(setCountLabel)
+		workout.secondsPerSet = Int32(secondsPerSetField.text!) ?? 60
+		CoreDataHelper.saveWorkout()
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let OtherViewController = segue.destination as? OtherViewController {
+			OtherViewController.selectedWorkout = workout
+		}
+	}
+
 
 }

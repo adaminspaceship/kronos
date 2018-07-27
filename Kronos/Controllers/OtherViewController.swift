@@ -17,7 +17,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	var selectedWorkout = Workout()
     var ringProgressView = RingProgressView()
     let subView = SpringView()
-	
+	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
 	
 	
     override func viewDidLoad() {
@@ -27,6 +27,13 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		countdownLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		twoLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		oneLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
+		//set label
+		setLabel.center = CGPoint(x: view.center.x, y: ringProgressView.bounds.size.height/2+100)
+		setLabel.textAlignment = .center
+		setLabel.text = "Rest"
+		
+		self.view.addSubview(setLabel)
+		
 		let randomValColor = UIColor.red.analagous0
 		let randomKeyColor = UIColor.red.analagous1
 		ringProgressView.startColor = randomKeyColor
@@ -54,28 +61,36 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var twoLabel: SpringLabel!
 	
 	@IBOutlet weak var oneLabel: SpringLabel!
+	
+	var started = false
 	@IBAction func startButton(_ sender: Any) {
-		countdownLabel.animation = "squeezeDown"
-		countdownLabel.duration = 1.5
-		countdownLabel.animateNext {
-			self.countdownLabel.isHidden = true
-			self.twoLabel.animation = "squeezeDown"
-			self.twoLabel.duration = 1.5
-			self.twoLabel.animateNext(completion: {
-				self.twoLabel.isHidden = true
-				self.oneLabel.animation = "squeezeDown"
-				self.oneLabel.duration = 1.3
-				self.oneLabel.animate()
-				self.oneLabel.animateNext(completion: {
-					self.oneLabel.isHidden = true
-					self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+		
+		if started == false {
+			countdownLabel.animation = "squeezeDown"
+			countdownLabel.duration = 1.5
+			countdownLabel.animateNext {
+				self.countdownLabel.isHidden = true
+				self.twoLabel.animation = "squeezeDown"
+				self.twoLabel.duration = 1.5
+				self.twoLabel.animateNext(completion: {
+					self.twoLabel.isHidden = true
+					self.oneLabel.animation = "squeezeDown"
+					self.oneLabel.duration = 1.3
+					self.oneLabel.animate()
+					self.oneLabel.animateNext(completion: {
+						self.oneLabel.isHidden = true
+						self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+					})
+					
 				})
-				
-			})
+			}
+		} else {
+			
 		}
-
 		print(selectedWorkout.secondsPerSet)
 	}
+	
+	var setsCompleted = 0
 	
     func animation(duration: Double) {
         UIView.animate(withDuration: TimeInterval(duration/20*7.5),delay: 0,options: .curveLinear , animations: {
@@ -89,12 +104,24 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
                 }) {(f) in
                     UIView.animate(withDuration: TimeInterval(duration/20*2.5),delay: 0,options: .curveLinear, animations: {
                         self.ringProgressView.progress = 1.0
-                    })
+						
+					}, completion: {(finished:Bool) in
+						self.setLabel.animation = "morph"
+						self.setLabel.duration = 10
+						self.setLabel.animateNext(completion: {
+							self.setsCompleted += 1
+							if self.setsCompleted < self.selectedWorkout.numberOfSets {
+								self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+								self.ringProgressView.progress = 0.0
+							} else {
+								print("done")
+							}
+						})
+					})
                 }
             }
         }
-        
-        
+		
     }
 	
     

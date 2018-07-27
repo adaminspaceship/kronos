@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		tableView.rowHeight = 60
 		
     }
 	override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet)")
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
 	}
+
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let OtherViewController = segue.destination as? OtherViewController {

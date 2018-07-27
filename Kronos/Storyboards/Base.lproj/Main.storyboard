@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clg-bT-O98">
                                 <rect key="frame" x="96" y="79" width="222" height="71"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="59"/>
-                                <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g29-tz-9F6">
@@ -42,10 +42,9 @@
                                                     <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=".. seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12D-EW-T8z">
-                                                    <rect key="frame" x="318" y="11" width="78" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".. seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12D-EW-T8z">
+                                                    <rect key="frame" x="349" y="2.9999999999999991" width="61.666666666666686" height="15.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                                     <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -53,8 +52,10 @@
                                             <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="aAs-N3-qdw" firstAttribute="leading" secondItem="Jre-r0-5IJ" secondAttribute="leadingMargin" constant="44" id="G0U-6h-V0B"/>
+                                                <constraint firstItem="12D-EW-T8z" firstAttribute="centerY" secondItem="aAs-N3-qdw" secondAttribute="centerY" constant="-10.166666666666668" id="TCo-lL-TLP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aAs-N3-qdw" secondAttribute="trailing" constant="44" id="eqG-ng-hh6"/>
                                                 <constraint firstItem="aAs-N3-qdw" firstAttribute="centerY" secondItem="Jre-r0-5IJ" secondAttribute="centerY" id="hzh-kV-oc2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="12D-EW-T8z" secondAttribute="trailing" constant="-16.666666666666686" id="zyg-lf-bXJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -197,6 +198,9 @@
                                 <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D6I-QH-ZXK" id="h7U-9n-j0x"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjb-M3-HXp">
                                 <rect key="frame" x="117.66666666666669" y="660" width="179" height="45"/>
@@ -257,7 +261,7 @@
                                 <state key="normal" image="done_button"/>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="FCj-EO-nNr" eventType="touchUpInside" id="iG0-WG-oDe"/>
-                                    <segue destination="niS-mp-V5T" kind="show" id="LHu-4V-BgY"/>
+                                    <segue destination="VhD-xx-bQK" kind="show" id="aSj-uc-Gs6"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Exercise" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLf-5Q-OTM">
@@ -279,6 +283,9 @@
                                 <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FCj-EO-nNr" id="xuC-55-0fb"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds per set?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-Ob-aQB">
                                 <rect key="frame" x="36" y="167" width="341" height="140"/>
@@ -342,7 +349,4 @@
         <image name="dumbell" width="25" height="16"/>
         <image name="medal" width="22" height="23"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="MGN-f7-e53"/>
-    </inferredMetricsTieBreakers>
 </document>

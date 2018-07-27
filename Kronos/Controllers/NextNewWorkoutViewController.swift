@@ -39,15 +39,11 @@ class NextNewWorkoutViewController: UIViewController {
 		
 		workout.exerciseName = workoutName
 		workout.numberOfSets = Int32(setCountLabel)
-		workout.secondsPerSet = Int32(secondsPerSetField.text!) ?? 60
+		workout.secondsPerSet = Int32(secondsPerSetField.text!)!
 		CoreDataHelper.saveWorkout()
+		
 	}
 
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let OtherViewController = segue.destination as? OtherViewController {
-			OtherViewController.selectedWorkout = workout
-		}
-	}
 
 
 }

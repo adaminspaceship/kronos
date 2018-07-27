@@ -12,22 +12,21 @@ import CoreData
 import UIColor_Hex_Swift
 import Spring
 
-class OtherViewController: UIViewController {
+class OtherViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var startButtonTapped: UIButton!
-	
-	let colorsCombos = ["#0DFFD2":"#0CE881","#0DAFFF":"#00FFC9","#FF0D42":"#E100FF","#FF850D":"#FF3400"]
 	var selectedWorkout = Workout()
     var ringProgressView = RingProgressView()
     let subView = SpringView()
+	
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
 		subView.frame = CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-250, width: 350, height: 350)
 		
         ringProgressView = RingProgressView(frame: CGRect(x: subView.frame.size.width/2-175, y: subView.frame.size.height/2-200, width: 350, height: 350))
-		let index: Int = Int(arc4random_uniform(UInt32(colorsCombos.count)))
-		let randomValColor = UIColor(Array(colorsCombos.values)[index])
-		let randomKeyColor = UIColor(Array(colorsCombos.keys)[index])
+		let randomValColor = UIColor.red.analagous0
+		let randomKeyColor = UIColor.red.analagous1
 		ringProgressView.startColor = randomKeyColor
 		ringProgressView.endColor = randomValColor
         ringProgressView.ringWidth = 25
@@ -76,5 +75,12 @@ class OtherViewController: UIViewController {
         
         
     }
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+			return false
+		}
+		return true
+	}
     
 }

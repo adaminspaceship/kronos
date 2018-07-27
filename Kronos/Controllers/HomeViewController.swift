@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
 	var workouts = [Workout]()
@@ -37,7 +36,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
 		cell.exerciseLabel.text = workouts[indexPath.row].exerciseName
-		cell.secondLabel.text = String(workouts[indexPath.row].secondsPerSet)
+		let secondsPerSet = workouts[indexPath.row].secondsPerSet
+		cell.secondLabel.text = "\(secondsPerSet) seconds"
 		return cell
 	}
 	var selectedWorkout = Workout()
@@ -47,7 +47,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		selectedWorkout = workout
 		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet)")
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
-		
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

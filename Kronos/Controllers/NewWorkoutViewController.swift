@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class NewWorkoutViewController: UIViewController {
+class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	let nextWorkoutController = NextNewWorkoutViewController()
@@ -42,12 +42,23 @@ class NewWorkoutViewController: UIViewController {
     
 	@IBOutlet weak var workoutNameField: UITextField!
 
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+			return false
+		}
+		return true
+	}
 
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let NextNewWorkoutViewController = segue.destination as? NextNewWorkoutViewController {
 			NextNewWorkoutViewController.setCountLabel = Int(setCount.text!) ?? 3
-			NextNewWorkoutViewController.workoutName = workoutNameField.text ?? "Untitled Workout"
+			if workoutNameField.text == "" {
+				NextNewWorkoutViewController.workoutName = "Untitled Workout"
+			} else {
+				NextNewWorkoutViewController.workoutName = workoutNameField.text!
+			}
+			
 		}
 	}
 	

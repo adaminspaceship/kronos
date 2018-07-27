@@ -30,5 +30,20 @@ extension UIColor {
 		getWhite(&white, alpha: nil)
 		return white > 0.5
 	}
+	
+	var analagous0: UIColor {
+		return self.withHueOffset(offset: -1 / 12)
+	}
+	var analagous1: UIColor {
+		return self.withHueOffset(offset: 1 / 12)
+	}
+	func withHueOffset(offset: CGFloat) -> UIColor {
+		var h: CGFloat = 0
+		var s: CGFloat = 0
+		var b: CGFloat = 0
+		var a: CGFloat = 0
+		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+		return UIColor(hue: fmod(h + offset, 1), saturation: s, brightness: b, alpha: a)
+	}
 }
 

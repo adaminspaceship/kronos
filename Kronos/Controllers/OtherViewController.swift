@@ -23,8 +23,10 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 		subView.frame = CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-250, width: 350, height: 350)
-		
         ringProgressView = RingProgressView(frame: CGRect(x: subView.frame.size.width/2-175, y: subView.frame.size.height/2-200, width: 350, height: 350))
+		countdownLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
+		twoLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
+		oneLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		let randomValColor = UIColor.red.analagous0
 		let randomKeyColor = UIColor.red.analagous1
 		ringProgressView.startColor = randomKeyColor
@@ -48,11 +50,30 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
 		
     }
-    
+	@IBOutlet weak var countdownLabel: SpringLabel!
+	@IBOutlet weak var twoLabel: SpringLabel!
+	
+	@IBOutlet weak var oneLabel: SpringLabel!
 	@IBAction func startButton(_ sender: Any) {
-		
-		
-		animation(duration: Double(selectedWorkout.secondsPerSet))
+		countdownLabel.animation = "squeezeDown"
+		countdownLabel.duration = 1.5
+		countdownLabel.animateNext {
+			self.countdownLabel.isHidden = true
+			self.twoLabel.animation = "squeezeDown"
+			self.twoLabel.duration = 1.5
+			self.twoLabel.animateNext(completion: {
+				self.twoLabel.isHidden = true
+				self.oneLabel.animation = "squeezeDown"
+				self.oneLabel.duration = 1.3
+				self.oneLabel.animate()
+				self.oneLabel.animateNext(completion: {
+					self.oneLabel.isHidden = true
+					self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+				})
+				
+			})
+		}
+
 		print(selectedWorkout.secondsPerSet)
 	}
 	

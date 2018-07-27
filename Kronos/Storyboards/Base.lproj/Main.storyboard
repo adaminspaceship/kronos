@@ -82,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="nET-fj-Q8j"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kronos" id="PPd-xa-6wm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="dumbell" id="equ-44-ZvS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="equ-44-ZvS">
                             <connections>
                                 <segue destination="D6I-QH-ZXK" kind="show" id="0mk-8N-ow5"/>
                             </connections>
@@ -346,7 +346,6 @@
     <resources>
         <image name="button" width="179" height="45"/>
         <image name="done_button" width="179" height="45"/>
-        <image name="dumbell" width="25" height="16"/>
         <image name="medal" width="22" height="23"/>
     </resources>
 </document>

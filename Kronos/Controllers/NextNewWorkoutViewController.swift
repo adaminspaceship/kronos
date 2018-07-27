@@ -23,6 +23,15 @@ class NextNewWorkoutViewController: UIViewController {
 		secondsPerSetField.becomeFirstResponder()
 		
     }
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+			return false
+		}
+		return true
+	}
+
+	
 	@IBOutlet weak var secondsPerSetField: UITextField!
 	
 	@IBOutlet weak var workoutNameField: UITextField!
@@ -32,14 +41,14 @@ class NextNewWorkoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	let workout = CoreDataHelper.newWorkout()
+	
     
 	@IBAction func doneButtonTapped(_ sender: Any) {
 
-		
+		let workout = CoreDataHelper.newWorkout()
 		workout.exerciseName = workoutName
 		workout.numberOfSets = Int32(setCountLabel)
-		workout.secondsPerSet = Int32(secondsPerSetField.text!)!
+		workout.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
 		CoreDataHelper.saveWorkout()
 		
 	}

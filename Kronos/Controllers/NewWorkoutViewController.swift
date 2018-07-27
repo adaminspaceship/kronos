@@ -54,7 +54,7 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if let NextNewWorkoutViewController = segue.destination as? NextNewWorkoutViewController {
 			NextNewWorkoutViewController.setCountLabel = Int(setCount.text!) ?? 3
 			if workoutNameField.text == "" {
-				NextNewWorkoutViewController.workoutName = "Untitled Workout"
+				NextNewWorkoutViewController.workoutName = "Untitled Exercise"
 			} else {
 				NextNewWorkoutViewController.workoutName = workoutNameField.text!
 			}

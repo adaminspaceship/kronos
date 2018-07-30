@@ -17,7 +17,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	var selectedWorkout = Workout()
     var ringProgressView = RingProgressView()
     let subView = SpringView()
-	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 	
 	
     override func viewDidLoad() {
@@ -30,8 +30,11 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		//set label
 		setLabel.center = CGPoint(x: view.center.x, y: ringProgressView.bounds.size.height/2+100)
 		setLabel.textAlignment = .center
+		setLabel.textColor = UIColor(hex: "F0EEF1")
+		setLabel.font = UIFont.systemFont(ofSize: 50, weight: .semibold)
 		setLabel.text = "Rest"
-		
+		setLabel.numberOfLines = 2
+		setLabel.isHidden = true
 		self.view.addSubview(setLabel)
 		
 		let randomValColor = UIColor.red.analagous0
@@ -90,29 +93,38 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		print(selectedWorkout.secondsPerSet)
 	}
 	
-	var setsCompleted = 0
+	
+	
+	var setsCompleted = 1
+	
+	
 	
     func animation(duration: Double) {
-        UIView.animate(withDuration: TimeInterval(duration/20*7.5),delay: 0,options: .curveLinear , animations: {
+        UIView.animate(withDuration: TimeInterval(duration/20*8),delay: 0,options: .curveLinear , animations: {
             self.ringProgressView.progress = 0.25
         }) { (hello) in
-            UIView.animate(withDuration: TimeInterval(duration/20*6.25),delay: 0,options: .curveLinear, animations: {
+            UIView.animate(withDuration: TimeInterval(duration/20*6),delay: 0,options: .curveLinear, animations: {
                 self.ringProgressView.progress = 0.5
             }) {(he) in
-                UIView.animate(withDuration: TimeInterval(duration/20*3.75),delay: 0,options: .curveLinear, animations: {
+                UIView.animate(withDuration: TimeInterval(duration/20*4),delay: 0,options: .curveLinear, animations: {
                     self.ringProgressView.progress = 0.75
                 }) {(f) in
-                    UIView.animate(withDuration: TimeInterval(duration/20*2.5),delay: 0,options: .curveLinear, animations: {
+                    UIView.animate(withDuration: TimeInterval(duration/20*2),delay: 0,options: .curveLinear, animations: {
                         self.ringProgressView.progress = 1.0
 						
 					}, completion: {(finished:Bool) in
-						self.setLabel.animation = "morph"
+						self.setLabel.animation = "shake"
 						self.setLabel.duration = 10
-						self.setLabel.animateNext(completion: {
+						self.setLabel.isHidden = false
+						self.restAnimation()
+						self.setLabel.text = "Rest... Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)"
+						print("Rest... Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)")
+						self.setLabel.animateToNext(completion: {
 							self.setsCompleted += 1
+							self.setLabel.isHidden = true
 							if self.setsCompleted < self.selectedWorkout.numberOfSets {
 								self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
-								self.ringProgressView.progress = 0.0
+								
 							} else {
 								print("done")
 							}
@@ -123,6 +135,13 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
         }
 		
     }
+	
+	
+	func restAnimation() {
+		UIView.animate(withDuration: 10) {
+			self.ringProgressView.progress = 0.0
+		}
+	}
 	
     
 }

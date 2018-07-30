@@ -82,7 +82,9 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 					self.oneLabel.animate()
 					self.oneLabel.animateNext(completion: {
 						self.oneLabel.isHidden = true
-						self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+						self.recursiveAnimation(duration: Double(self.selectedWorkout.secondsPerSet), currentTime: 0, position: 0)
+						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
 					})
 					
 				})
@@ -96,11 +98,31 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	var setsCompleted = 1
+	var counter: Double = 0
 	
+	func recursiveAnimation(duration: Double, currentTime: Double, position: Double) {
+		if currentTime > duration {
+			return
+		}
+		
+
+		let position = pow(counter / 0.1, 2) / pow(duration / 0.1, 2)
+
+		counter += 0.1
+		//let speed = (currentTime/duration)
+		//let position = position + speed   / duration / 10
+		print(currentTime)
+		UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+			self.ringProgressView.progress = position
+		}) { (complete) in
+			
+			self.recursiveAnimation(duration: duration, currentTime: currentTime+0.1, position: position)
+		}
+	}
 	
 	
     func animation(duration: Double) {
-        UIView.animate(withDuration: TimeInterval(duration/20*8),delay: 0,options: .curveLinear , animations: {
+        UIView.animate(withDuration: TimeInterval(duration/20*10),delay: 0,options: .curveLinear , animations: {
             self.ringProgressView.progress = 0.25
         }) { (hello) in
             UIView.animate(withDuration: TimeInterval(duration/20*6),delay: 0,options: .curveLinear, animations: {
@@ -109,7 +131,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
                 UIView.animate(withDuration: TimeInterval(duration/20*4),delay: 0,options: .curveLinear, animations: {
                     self.ringProgressView.progress = 0.75
                 }) {(f) in
-                    UIView.animate(withDuration: TimeInterval(duration/20*2),delay: 0,options: .curveLinear, animations: {
+                    UIView.animate(withDuration: TimeInterval(duration/20*4),delay: 0,options: .curveLinear, animations: {
                         self.ringProgressView.progress = 1.0
 						
 					}, completion: {(finished:Bool) in

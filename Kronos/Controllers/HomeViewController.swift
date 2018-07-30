@@ -37,8 +37,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
 		cell.exerciseLabel.text = workouts[indexPath.row].exerciseName
-		let secondsPerSet = workouts[indexPath.row].secondsPerSet
-		cell.secondLabel.text = "\(secondsPerSet) seconds"
+		let workout = workouts[indexPath.row]
+		cell.secondLabel.text = "\(workout.secondsPerSet) seconds"
+		cell.numberOfSetsLabel.text = "\(workout.numberOfSets) sets"
 		return cell
 	}
 	var selectedWorkout = Workout()
@@ -48,6 +49,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		selectedWorkout = workout
 		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet)")
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
+	}
+	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	func tableView(_ tableView: UITableView, commit editingStyle:   UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if (editingStyle == .delete) {
+			workouts.remove(at: indexPath.row)
+			tableView.beginUpdates()
+			tableView.deleteRows(at: [indexPath], with: .middle)
+			tableView.endUpdates()
+		}
 	}
 
 	

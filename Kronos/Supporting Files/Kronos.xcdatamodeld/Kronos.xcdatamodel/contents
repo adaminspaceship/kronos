@@ -3,9 +3,10 @@
     <entity name="Workout" representedClassName=".Workout" syncable="YES" codeGenerationType="class">
         <attribute name="exerciseName" optional="YES" attributeType="String" customClassName="NSArray" syncable="YES"/>
         <attribute name="numberOfSets" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="restTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="secondsPerSet" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Workout" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Workout" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

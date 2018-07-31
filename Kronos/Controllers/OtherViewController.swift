@@ -19,6 +19,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
     let subView = SpringView()
 	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 	
+	let UIColorArray = [UIColor.red,UIColor.black,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple,UIColor.yellow]
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,14 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		setLabel.center = CGPoint(x: view.center.x, y: ringProgressView.bounds.size.height/2+100)
 		setLabel.textAlignment = .center
 		setLabel.textColor = UIColor(hex: "F0EEF1")
-		setLabel.font = UIFont.systemFont(ofSize: 50, weight: .semibold)
-		setLabel.text = "Rest"
+		setLabel.font = UIFont.systemFont(ofSize: 40, weight: .semibold)
+		setLabel.text = ""
 		setLabel.numberOfLines = 2
 		setLabel.isHidden = true
 		self.view.addSubview(setLabel)
-		
-		let randomValColor = UIColor.red.analagous0
-		let randomKeyColor = UIColor.red.analagous1
+		let randomColor = UIColorArray[Int(arc4random_uniform(UInt32(UIColorArray.count)))]
+		let randomValColor = randomColor.analagous0
+		let randomKeyColor = randomColor.analagous1
 		ringProgressView.startColor = randomKeyColor
 		ringProgressView.endColor = randomValColor
         ringProgressView.ringWidth = 25
@@ -83,8 +84,8 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 					self.oneLabel.animateNext(completion: {
 						self.oneLabel.isHidden = true
 						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
-						self.recursiveAnimation(duration: Double(self.selectedWorkout.secondsPerSet), currentTime: 0, position: 0)
-						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+						//self.recursiveAnimation(duration: Double(self.selectedWorkout.secondsPerSet), currentTime: 0, position: 0)
+						self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
 					})
 					
 				})
@@ -102,16 +103,36 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	
 	func recursiveAnimation(duration: Double, currentTime: Double, position: Double) {
 		if currentTime > duration {
+			self.setLabel.animation = "shake"
+			self.setLabel.duration = 10
+			self.setLabel.isHidden = false
+			self.restAnimation()
+			self.setLabel.text = "Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)"
+			print("Rest... Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)")
+			self.setLabel.animateToNext(completion: {
+				self.setsCompleted += 1
+				self.setLabel.isHidden = true
+				if self.setsCompleted < self.selectedWorkout.numberOfSets {
+					self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+					
+				} else {
+					print("done")
+				}
+			})
 			return
 		}
 		
 
+		//print(currentTime)
+		//print("duration \(duration)")
+//		print(0.5 + currentTime / duration)
+//		print(counter)
 		let position = pow(counter / 0.1, 2) / pow(duration / 0.1, 2)
 
 		counter += 0.1
 		//let speed = (currentTime/duration)
 		//let position = position + speed   / duration / 10
-		print(currentTime)
+		//print(currentTime)
 		UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
 			self.ringProgressView.progress = position
 		}) { (complete) in
@@ -135,7 +156,8 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
                         self.ringProgressView.progress = 1.0
 						
 					}, completion: {(finished:Bool) in
-						self.setLabel.animation = "shake"
+//						self.setLabel.animation = ""
+						self.setLabel.force = 10
 						self.setLabel.duration = 10
 						self.setLabel.isHidden = false
 						self.restAnimation()

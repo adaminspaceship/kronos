@@ -386,7 +386,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndL-e9-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="1428.9355322338831"/>
+            <point key="canvasLocation" x="1746" y="2027"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vyz-D1-kME">
+            <objects>
+                <viewController id="f7E-TK-Lxz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjp-Sg-r5M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds of rest?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-1W-RuI">
+                                <rect key="frame" x="10.666666666666657" y="186" width="393" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.93333333330000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Exercise" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fq-lZ-dK3">
+                                <rect key="frame" x="4" y="93" width="406" height="66"/>
+                                <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-cE-egY">
+                                <rect key="frame" x="58" y="274" width="298" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="1p0-T7-cFb"/>
+                                </constraints>
+                                <color key="textColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D6I-QH-ZXK" id="O8U-tb-3VW"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAc-Rb-uHC">
+                                <rect key="frame" x="117.66666666666666" y="660" width="179" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button">
+                                    <color key="titleColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FCj-EO-nNr" kind="show" id="ziz-CA-BOC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5fq-lZ-dK3" firstAttribute="centerX" secondItem="yjp-Sg-r5M" secondAttribute="centerX" id="16l-NI-z0d"/>
+                            <constraint firstItem="nzU-cE-egY" firstAttribute="top" secondItem="K5Q-1W-RuI" secondAttribute="bottom" constant="46" id="C4w-vD-qVt"/>
+                            <constraint firstItem="5fq-lZ-dK3" firstAttribute="centerX" secondItem="K5Q-1W-RuI" secondAttribute="centerX" id="TZn-XA-M3Z"/>
+                            <constraint firstItem="nzU-cE-egY" firstAttribute="leading" secondItem="7iE-FL-tVw" secondAttribute="leading" constant="58" id="TvY-oA-19a"/>
+                            <constraint firstItem="K5Q-1W-RuI" firstAttribute="top" secondItem="5fq-lZ-dK3" secondAttribute="bottom" constant="27" id="ZOy-s2-NRZ"/>
+                            <constraint firstItem="5fq-lZ-dK3" firstAttribute="leading" secondItem="7iE-FL-tVw" secondAttribute="leading" constant="4" id="rVI-8L-YSV"/>
+                            <constraint firstItem="5fq-lZ-dK3" firstAttribute="top" secondItem="7iE-FL-tVw" secondAttribute="top" constant="73" id="sJt-NL-0sw"/>
+                            <constraint firstItem="nzU-cE-egY" firstAttribute="centerX" secondItem="K5Q-1W-RuI" secondAttribute="centerX" id="xOK-Tw-LJ1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7iE-FL-tVw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L35-nB-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="1467"/>
         </scene>
         <!--Home-->
         <scene sceneID="cfQ-ra-TdC">
@@ -414,4 +480,7 @@
         <image name="done_button" width="179" height="45"/>
         <image name="medal" width="22" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0gF-5k-EuD"/>
+    </inferredMetricsTieBreakers>
 </document>

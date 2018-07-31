@@ -47,6 +47,11 @@ struct CoreDataHelper {
 			print("Could not save \(error.localizedDescription)")
 		}
 	}
+	static func delete(workout: Workout) {
+		context.delete(workout)
+		
+		saveWorkout()
+	}
 	
 }
 

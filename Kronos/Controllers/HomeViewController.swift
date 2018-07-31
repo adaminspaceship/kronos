@@ -54,12 +54,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return true
 	}
-	func tableView(_ tableView: UITableView, commit editingStyle:   UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		if (editingStyle == .delete) {
-			workouts.remove(at: indexPath.row)
-			tableView.beginUpdates()
-			tableView.deleteRows(at: [indexPath], with: .middle)
-			tableView.endUpdates()
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			let workoutToDelete = workouts[indexPath.row]
+			CoreDataHelper.delete(workout: workoutToDelete)
+			
+			workouts = CoreDataHelper.retrieveWorkouts()
+			tableView.reloadData()
 		}
 	}
 

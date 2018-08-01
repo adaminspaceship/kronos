@@ -27,6 +27,13 @@ class RestWorkoutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+			return false
+		}
+		return true
+	}
     
 
     /*
@@ -46,7 +53,7 @@ class RestWorkoutViewController: UIViewController {
 			if restSecondsField.text == nil {
 				NextNewWorkoutViewController.secondsRest = 3
 			} else {
-				NextNewWorkoutViewController.secondsRest = Int(restSecondsField.text!)!
+				NextNewWorkoutViewController.secondsRest = Int(restSecondsField.text ?? "30" ) ?? 30
 			}
 			
 		}

@@ -13,6 +13,9 @@
 		9924204E2108F2BD00148D38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204D2108F2BD00148D38 /* HomeViewController.swift */; };
 		992420502108F4FE00148D38 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204F2108F4FE00148D38 /* TableViewCell.swift */; };
 		992420522109251800148D38 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992420512109251800148D38 /* CoreDataHelper.swift */; };
+		99776BE2211234C9005B9C63 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BDF211234C8005B9C63 /* background@2x.png */; };
+		99776BE3211234C9005B9C63 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BE0211234C8005B9C63 /* background@3x.png */; };
+		99776BE4211234C9005B9C63 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BE1211234C8005B9C63 /* background.png */; };
 		99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */; };
 		99D3B57C2110E12A00BC391A /* RestWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B57B2110E12A00BC391A /* RestWorkoutViewController.swift */; };
 		99D80D2521064A1000716921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D2421064A1000716921 /* AppDelegate.swift */; };
@@ -60,6 +63,9 @@
 		9924204D2108F2BD00148D38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9924204F2108F4FE00148D38 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		992420512109251800148D38 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		99776BDF211234C8005B9C63 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		99776BE0211234C8005B9C63 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
+		99776BE1211234C8005B9C63 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		99D3B57B2110E12A00BC391A /* RestWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestWorkoutViewController.swift; path = Kronos/Controllers/RestWorkoutViewController.swift; sourceTree = SOURCE_ROOT; };
 		99D80D2121064A1000716921 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +219,9 @@
 		99F514E2210B71AD00798833 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99776BE1211234C8005B9C63 /* background.png */,
+				99776BDF211234C8005B9C63 /* background@2x.png */,
+				99776BE0211234C8005B9C63 /* background@3x.png */,
 				9924204A2108E68600148D38 /* Kronos.xcdatamodeld */,
 				99D80D3021064A1100716921 /* Info.plist */,
 				99F514E3210B720100798833 /* Constants.swift */,
@@ -354,6 +363,9 @@
 				99D80D2F21064A1100716921 /* LaunchScreen.storyboard in Resources */,
 				99D80D2C21064A1100716921 /* Assets.xcassets in Resources */,
 				99D80D2A21064A1000716921 /* Main.storyboard in Resources */,
+				99776BE2211234C9005B9C63 /* background@2x.png in Resources */,
+				99776BE3211234C9005B9C63 /* background@3x.png in Resources */,
+				99776BE4211234C9005B9C63 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

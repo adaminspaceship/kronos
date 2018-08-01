@@ -18,7 +18,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
     let subView = SpringView()
 	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 	
-	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple,UIColor.yellow]
+	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple]
 	
     override func viewDidLoad() {
         super.viewDidLoad()

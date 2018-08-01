@@ -19,13 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="-1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g29-tz-9F6">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="-1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g29-tz-9F6">
+                                <rect key="frame" x="0.0" y="113" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.52106726169999995" green="0.24050712590000001" blue="0.68248951440000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="JX8-SE-Eaw" customClass="TableViewCell" customModule="Kronos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="JX8-SE-Eaw" customClass="TableViewCell" customModule="Kronos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JX8-SE-Eaw" id="Jre-r0-5IJ">
@@ -111,7 +111,7 @@
                         <constraints>
                             <constraint firstItem="g29-tz-9F6" firstAttribute="bottom" secondItem="nET-fj-Q8j" secondAttribute="bottom" id="ChB-TP-0U7"/>
                             <constraint firstAttribute="trailing" secondItem="g29-tz-9F6" secondAttribute="trailing" id="DRi-vg-WI1"/>
-                            <constraint firstItem="g29-tz-9F6" firstAttribute="top" secondItem="nET-fj-Q8j" secondAttribute="top" id="Dpk-d0-wlO"/>
+                            <constraint firstItem="g29-tz-9F6" firstAttribute="top" secondItem="nET-fj-Q8j" secondAttribute="top" constant="49" id="Dpk-d0-wlO"/>
                             <constraint firstItem="g29-tz-9F6" firstAttribute="leading" secondItem="f0c-bg-Nic" secondAttribute="leading" id="DyM-Gb-mCd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nET-fj-Q8j"/>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tav-O4-4Cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3018.4000000000001" y="-4.0479760119940034"/>
+            <point key="canvasLocation" x="3017.3913043478265" y="-4.0760869565217392"/>
         </scene>
         <!--Other View Controller-->
         <scene sceneID="Hgq-q6-t0T">

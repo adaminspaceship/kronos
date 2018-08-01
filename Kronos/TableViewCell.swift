@@ -25,11 +25,11 @@ class TableViewCell: UITableViewCell {
 	
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-		if selected == true {
-			self.backgroundCardView.backgroundColor = UIColor.gray
-		} else {
-			self.backgroundCardView.backgroundColor = UIColor.white
-		}
+//		if selected == true {
+//			self.backgroundCardView.backgroundColor = UIColor.gray
+//		} else {
+//			self.backgroundCardView.backgroundColor = UIColor.white
+//		}
 		
         // Configure the view for the selected state
     }

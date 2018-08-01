@@ -174,13 +174,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmg-pK-8YY">
-                                <rect key="frame" x="116" y="558" width="145" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmg-pK-8YY">
+                                <rect key="frame" x="98" y="556" width="179" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="HD8-bg-k95"/>
+                                    <constraint firstAttribute="height" constant="45" id="HD8-bg-k95"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" image="button">
                                     <color key="titleColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -190,16 +189,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Tmg-pK-8YY" firstAttribute="leading" secondItem="PWk-C2-TpA" secondAttribute="leading" constant="115" id="H8K-n2-GCm"/>
-                            <constraint firstItem="PWk-C2-TpA" firstAttribute="bottom" secondItem="Tmg-pK-8YY" secondAttribute="bottom" constant="49" id="fmE-Zq-gti"/>
-                            <constraint firstItem="PWk-C2-TpA" firstAttribute="trailing" secondItem="Tmg-pK-8YY" secondAttribute="trailing" constant="115" id="tc3-2N-BX8"/>
+                            <constraint firstItem="Tmg-pK-8YY" firstAttribute="leading" secondItem="PWk-C2-TpA" secondAttribute="leading" constant="98" id="H8K-n2-GCm"/>
+                            <constraint firstItem="PWk-C2-TpA" firstAttribute="bottom" secondItem="Tmg-pK-8YY" secondAttribute="bottom" constant="66" id="fmE-Zq-gti"/>
+                            <constraint firstItem="PWk-C2-TpA" firstAttribute="trailing" secondItem="Tmg-pK-8YY" secondAttribute="trailing" constant="98" id="tc3-2N-BX8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PWk-C2-TpA"/>
                     </view>
                     <connections>
                         <outlet property="countdownLabel" destination="PU7-gP-qjc" id="IKc-4D-rkT"/>
                         <outlet property="oneLabel" destination="r7f-gs-Pf2" id="dT4-nu-ycq"/>
-                        <outlet property="startButtonTapped" destination="Tmg-pK-8YY" id="M9M-Sb-G73"/>
                         <outlet property="twoLabel" destination="6wj-VS-RTS" id="qoi-Gh-aZS"/>
                     </connections>
                 </viewController>
@@ -427,9 +425,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tx5-Jr-rez">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                             <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">

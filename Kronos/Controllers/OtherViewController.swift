@@ -18,7 +18,6 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
     let subView = SpringView()
 	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 	
-	@IBOutlet weak var startButtonTapped: UIButton!
 	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple,UIColor.yellow]
 	
     override func viewDidLoad() {
@@ -44,17 +43,10 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		ringProgressView.endColor = randomValColor
         ringProgressView.ringWidth = 25
         ringProgressView.progress = 0.0
-        ringProgressView.backgroundRingColor = UIColor.black
+		ringProgressView.backgroundRingColor = UIColor(hex: "#474747")
         ringProgressView.shadowOpacity = 0
 		view.addSubview(subView)
-		startButtonTapped.center.x = self.view.center.y
 		subView.addSubview(ringProgressView)
-		if randomKeyColor.isLight {
-			startButtonTapped.setTitleColor(.black, for: .normal)
-		} else {
-			startButtonTapped.setTitleColor(.white, for: .normal)
-		}
-		startButtonTapped.setGradientBackground(colorOne: randomKeyColor, colorTwo: randomValColor)
     }
     
     override func viewDidAppear(_ animated: Bool) {

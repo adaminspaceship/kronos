@@ -14,6 +14,7 @@
 		992420502108F4FE00148D38 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204F2108F4FE00148D38 /* TableViewCell.swift */; };
 		992420522109251800148D38 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992420512109251800148D38 /* CoreDataHelper.swift */; };
 		99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */; };
+		99D3B57C2110E12A00BC391A /* RestWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B57B2110E12A00BC391A /* RestWorkoutViewController.swift */; };
 		99D80D2521064A1000716921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D2421064A1000716921 /* AppDelegate.swift */; };
 		99D80D2A21064A1000716921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2821064A1000716921 /* Main.storyboard */; };
 		99D80D2C21064A1100716921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2B21064A1100716921 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		9924204F2108F4FE00148D38 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		992420512109251800148D38 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
+		99D3B57B2110E12A00BC391A /* RestWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestWorkoutViewController.swift; path = Kronos/Controllers/RestWorkoutViewController.swift; sourceTree = SOURCE_ROOT; };
 		99D80D2121064A1000716921 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D80D2421064A1000716921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D80D2921064A1000716921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				9924204D2108F2BD00148D38 /* HomeViewController.swift */,
 				99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */,
 				99E324ED2107C83B00BB3CC2 /* NewWorkoutViewController.swift */,
+				99D3B57B2110E12A00BC391A /* RestWorkoutViewController.swift */,
 				99E324F22107CBC800BB3CC2 /* NextNewWorkoutViewController.swift */,
 			);
 			path = Controllers;
@@ -458,6 +461,7 @@
 			files = (
 				99E324F32107CBC800BB3CC2 /* NextNewWorkoutViewController.swift in Sources */,
 				992420502108F4FE00148D38 /* TableViewCell.swift in Sources */,
+				99D3B57C2110E12A00BC391A /* RestWorkoutViewController.swift in Sources */,
 				99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */,
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,

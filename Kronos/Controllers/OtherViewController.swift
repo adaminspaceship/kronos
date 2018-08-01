@@ -13,13 +13,13 @@ import UIColor_Hex_Swift
 import Spring
 
 class OtherViewController: UIViewController, UITextFieldDelegate {
-	@IBOutlet weak var startButtonTapped: UIButton!
 	var selectedWorkout = Workout()
     var ringProgressView = RingProgressView()
     let subView = SpringView()
 	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 	
-	let UIColorArray = [UIColor.red,UIColor.black,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple,UIColor.yellow]
+	@IBOutlet weak var startButtonTapped: UIButton!
+	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple,UIColor.yellow]
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +47,13 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
         ringProgressView.backgroundRingColor = UIColor.black
         ringProgressView.shadowOpacity = 0
 		view.addSubview(subView)
+		startButtonTapped.center.x = self.view.center.y
 		subView.addSubview(ringProgressView)
-		if randomValColor.isLight {
+		if randomKeyColor.isLight {
 			startButtonTapped.setTitleColor(.black, for: .normal)
 		} else {
 			startButtonTapped.setTitleColor(.white, for: .normal)
 		}
-		startButtonTapped.layer.cornerRadius = 25
 		startButtonTapped.setGradientBackground(colorOne: randomKeyColor, colorTwo: randomValColor)
     }
     
@@ -93,12 +93,11 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		} else {
 			
 		}
-		print(selectedWorkout.secondsPerSet)
 	}
 	
 	
 	
-	var setsCompleted = 1
+	var setsCompleted = 0
 	var counter: Double = 0
 	
 	func recursiveAnimation(duration: Double, currentTime: Double, position: Double) {
@@ -156,9 +155,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
                         self.ringProgressView.progress = 1.0
 						
 					}, completion: {(finished:Bool) in
-//						self.setLabel.animation = ""
-						self.setLabel.force = 10
-						self.setLabel.duration = 10
+						self.setLabel.duration = CGFloat(self.selectedWorkout.restTime)
 						self.setLabel.isHidden = false
 						self.restAnimation()
 						self.setLabel.text = "Rest... Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)"
@@ -182,7 +179,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	func restAnimation() {
-		UIView.animate(withDuration: 10) {
+		UIView.animate(withDuration: TimeInterval(selectedWorkout.restTime)) {
 			self.ringProgressView.progress = 0.0
 		}
 	}

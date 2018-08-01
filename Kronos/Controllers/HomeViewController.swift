@@ -10,18 +10,21 @@ import UIKit
 import CoreData
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
 	
 	var workouts = [Workout]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-		tableView.rowHeight = 60
+		tableView.rowHeight = 80
+		
 		
     }
 	override func viewDidAppear(_ animated: Bool) {
 		workouts = CoreDataHelper.retrieveWorkouts()
 		tableView.reloadData()
+		
 	}
 
     override func didReceiveMemoryWarning() {
@@ -47,8 +50,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let workout = workouts[indexPath.row]
 		selectedWorkout = workout
-		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet)")
+		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet), rest per set: \(workout.restTime)")
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
+		
 	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -13,6 +13,7 @@ class NextNewWorkoutViewController: UIViewController {
 	
 	var setCountLabel = Int()
 	var workoutName = String()
+	var secondsRest = Int()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class NextNewWorkoutViewController: UIViewController {
 		workout.exerciseName = workoutName
 		workout.numberOfSets = Int32(setCountLabel)
 		workout.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
+		workout.restTime = Int32(secondsRest ?? 30) ?? 30
 		CoreDataHelper.saveWorkout()
 		
 	}

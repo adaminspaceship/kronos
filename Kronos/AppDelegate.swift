@@ -34,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 	}
 	
+	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+		let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+		let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "NewWorkoutViewController") as UIViewController
+		self.window?.rootViewController?.present(vc, animated: false, completion: nil)
+	}
+	
 	func applicationDidBecomeActive(_ application: UIApplication) {
 		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	}

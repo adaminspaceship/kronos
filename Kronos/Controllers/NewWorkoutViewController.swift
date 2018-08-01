@@ -51,12 +51,12 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let NextNewWorkoutViewController = segue.destination as? NextNewWorkoutViewController {
-			NextNewWorkoutViewController.setCountLabel = Int(setCount.text!) ?? 3
+		if let RestWorkoutViewController = segue.destination as? RestWorkoutViewController {
+			RestWorkoutViewController.setCountLabel = Int(setCount.text!) ?? 3
 			if workoutNameField.text == "" {
-				NextNewWorkoutViewController.workoutName = "Untitled Exercise"
+				RestWorkoutViewController.workoutName = "Untitled Exercise"
 			} else {
-				NextNewWorkoutViewController.workoutName = workoutNameField.text!
+				RestWorkoutViewController.workoutName = workoutNameField.text!
 			}
 			
 		}

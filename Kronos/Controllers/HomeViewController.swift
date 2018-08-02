@@ -12,7 +12,7 @@ import CoreData
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	
-	var workouts = [Workout]()
+	var exercises = [Exercise]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		
     }
 	override func viewDidAppear(_ animated: Bool) {
-		workouts = CoreDataHelper.retrieveWorkouts()
+		exercises = CoreDataHelper.retrieveExercises()
 		tableView.reloadData()
 		
 	}
@@ -41,22 +41,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	@IBOutlet weak var tableView: UITableView!
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return workouts.count
+		return exercises.count
 	}
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-		cell.exerciseLabel.text = workouts[indexPath.row].exerciseName
-		let workout = workouts[indexPath.row]
-		cell.secondLabel.text = "\(workout.secondsPerSet) seconds"
-		cell.numberOfSetsLabel.text = "\(workout.numberOfSets) sets"
+		cell.exerciseLabel.text = exercises[indexPath.row].exerciseName
+		let exercise = exercises[indexPath.row]
+		cell.secondLabel.text = "\(exercise.secondsPerSet) seconds"
+		cell.numberOfSetsLabel.text = "\(exercise.numberOfSets) sets"
 		return cell
 	}
-	var selectedWorkout = Workout()
+	var selectedExercise = Exercise()
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let workout = workouts[indexPath.row]
-		selectedWorkout = workout
-		print("Workout selected: \(workout.exerciseName), number of sets: \(workout.numberOfSets), seconds per set: \(workout.secondsPerSet), rest per set: \(workout.restTime)")
+		let exercise = exercises[indexPath.row]
+		selectedExercise = exercise
+		print("Exercise selected: \(exercise.exerciseName), number of sets: \(exercise.numberOfSets), seconds per set: \(exercise.secondsPerSet), rest per set: \(exercise.restTime)")
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
 		
 	}
@@ -67,10 +67,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			let workoutToDelete = workouts[indexPath.row]
-			CoreDataHelper.delete(workout: workoutToDelete)
+			let exerciseToDelete = exercises[indexPath.row]
+			CoreDataHelper.delete(exercise: exerciseToDelete)
 			
-			workouts = CoreDataHelper.retrieveWorkouts()
+			exercises = CoreDataHelper.retrieveExercises()
 			tableView.reloadData()
 		}
 	}
@@ -78,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let OtherViewController = segue.destination as? OtherViewController {
-			OtherViewController.selectedWorkout = selectedWorkout
+			OtherViewController.selectedExercise = selectedExercise
 		}
 	}
 

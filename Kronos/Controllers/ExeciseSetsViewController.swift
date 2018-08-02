@@ -1,5 +1,5 @@
 //
-//  NewWorkoutViewController.swift
+//  ExeciseSetsViewController.swift
 //  Kronos
 //
 //  Created by Adam Eliezerov on 24/07/2018.
@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
+class ExeciseSetsViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	let nextWorkoutController = NextNewWorkoutViewController()
@@ -31,6 +31,8 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
         setCount.layer.masksToBounds = true
         self.hideKeyboardWhenTappedAround()
 		workoutNameField.becomeFirstResponder()
+		
+		
     }
 
     override func didReceiveMemoryWarning() {

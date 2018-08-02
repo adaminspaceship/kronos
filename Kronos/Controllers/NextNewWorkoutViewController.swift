@@ -46,12 +46,12 @@ class NextNewWorkoutViewController: UIViewController {
     
 	@IBAction func doneButtonTapped(_ sender: Any) {
 
-		let workout = CoreDataHelper.newWorkout()
+		let workout = CoreDataHelper.newExercise()
 		workout.exerciseName = workoutName
 		workout.numberOfSets = Int32(setCountLabel)
 		workout.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
 		workout.restTime = Int32(secondsRest ?? 30) ?? 30
-		CoreDataHelper.saveWorkout()
+		CoreDataHelper.saveExercise()
 		
 	}
 

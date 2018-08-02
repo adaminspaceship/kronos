@@ -13,7 +13,7 @@ import UIColor_Hex_Swift
 import Spring
 
 class OtherViewController: UIViewController, UITextFieldDelegate {
-	var selectedWorkout = Workout()
+	var selectedExercise = Exercise()
     var ringProgressView = RingProgressView()
 	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 240, height: 100))
 	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple]
@@ -25,11 +25,11 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 		twoLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		oneLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		//set label
-		setLabel.center = CGPoint(x: 100, y: 100)
+		setLabel.center = CGPoint(x: view.center.x, y: 105)
 		setLabel.textAlignment = .center
 		setLabel.textColor = UIColor(hex: "474747")
 		setLabel.font = UIFont.systemFont(ofSize: 30, weight: .regular)
-		setLabel.text = "Get Ready For Set 1/\(selectedWorkout.numberOfSets)"
+		setLabel.text = "Get Ready For Set 1/\(selectedExercise.numberOfSets)"
 		setLabel.numberOfLines = 3
 		setLabel.isHidden = false
 		self.view.addSubview(setLabel)
@@ -44,6 +44,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
         ringProgressView.shadowOpacity = 0
 		DispatchQueue.main.async {
 			self.view.addSubview(self.ringProgressView)
+			
 		}
 		
 		
@@ -78,7 +79,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
 						//self.recursiveAnimation(duration: Double(self.selectedWorkout.secondsPerSet), currentTime: 0, position: 0)
 						self.setLabel.isHidden = true
-						self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+						self.animation(duration: Double(self.selectedExercise.secondsPerSet))
 					})
 					
 				})
@@ -90,7 +91,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	
-	var setsCompleted = 2
+	var setsCompleted = 1
 	var counter: Double = 0
 	var didCompleteExercise = false
 	
@@ -109,20 +110,25 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
                         self.ringProgressView.progress = 1.0
 						
 					}, completion: {(finished:Bool) in
-						self.setLabel.duration = CGFloat(self.selectedWorkout.restTime)
+						self.setLabel.duration = CGFloat(self.selectedExercise.restTime)
 						self.setLabel.isHidden = false
-						self.restAnimation()
-						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)"
-						print("Get Ready For Set: \(self.setsCompleted)/\(self.selectedWorkout.numberOfSets)")
+						if self.didCompleteExercise == true {
+							self.setLabel.text = "Done"
+							return
+						} else {
+							self.restAnimation()
+						}
+						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/\(self.selectedExercise.numberOfSets)"
+						print("Get Ready For Set: \(self.setsCompleted+1)/\(self.selectedExercise.numberOfSets)")
 						self.setLabel.animateToNext(completion: {
 							self.setLabel.isHidden = true
-							if self.setsCompleted < self.selectedWorkout.numberOfSets {
-								self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+							if self.setsCompleted < self.selectedExercise.numberOfSets-1 {
+								self.animation(duration: Double(self.selectedExercise.secondsPerSet))
 								self.setsCompleted += 1
 							} else {
 								if self.didCompleteExercise == false {
 									self.didCompleteExercise = true
-									self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
+									self.animation(duration: Double(self.selectedExercise.secondsPerSet))
 								} else {
 									self.setLabel.isHidden = false
 									self.setLabel.text = "Done"
@@ -138,7 +144,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	func restAnimation() {
-		UIView.animate(withDuration: TimeInterval(selectedWorkout.restTime)) {
+		UIView.animate(withDuration: TimeInterval(selectedExercise.restTime)) {
 			self.ringProgressView.progress = 0.0
 		}
 	}

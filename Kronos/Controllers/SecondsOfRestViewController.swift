@@ -1,5 +1,5 @@
 //
-//  RestWorkoutViewController.swift
+//  SecondsOfRestViewController.swift
 //  Kronos
 //
 //  Created by Adam Eliezerov on 31/07/2018.
@@ -8,18 +8,27 @@
 
 import UIKit
 
-class RestWorkoutViewController: UIViewController {
+class SecondsOfRestViewController: UIViewController {
 	
 	var setCountLabel = Int()
-	var workoutName = String()
+	var exerciseName = String()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		workoutNameField.text = workoutName
+		exerciseNameField.text = exerciseName
 		self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+		let border = CALayer()
+		let width = CGFloat(2.0)
+		border.borderColor = UIColor.darkGray.cgColor
+		border.frame = CGRect(x: 0, y: restSecondsField.frame.size.height - width, width: restSecondsField.frame.size.width, height: restSecondsField.frame.size.height)
+		
+		border.borderWidth = width
+		restSecondsField.layer.addSublayer(border)
+		restSecondsField.layer.masksToBounds = true
     }
-	@IBOutlet weak var workoutNameField: UITextField!
+	
+	@IBOutlet weak var exerciseNameField: UITextField!
 	
 	@IBOutlet weak var restSecondsField: UITextField!
 	
@@ -47,13 +56,13 @@ class RestWorkoutViewController: UIViewController {
     */
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let NextNewWorkoutViewController = segue.destination as? NextNewWorkoutViewController {
-			NextNewWorkoutViewController.setCountLabel = setCountLabel
-			NextNewWorkoutViewController.workoutName = workoutName
+		if let SecondsPerSetViewController = segue.destination as? SecondsPerSetViewController {
+			SecondsPerSetViewController.setCountLabel = setCountLabel
+			SecondsPerSetViewController.exerciseName = exerciseName
 			if restSecondsField.text == nil {
-				NextNewWorkoutViewController.secondsRest = 3
+				SecondsPerSetViewController.secondsRest = 3
 			} else {
-				NextNewWorkoutViewController.secondsRest = Int(restSecondsField.text ?? "30" ) ?? 30
+				SecondsPerSetViewController.secondsRest = Int(restSecondsField.text ?? "30" ) ?? 30
 			}
 			
 		}

@@ -76,8 +76,6 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
 					self.oneLabel.animate()
 					self.oneLabel.animateNext(completion: {
 						self.oneLabel.isHidden = true
-						//self.animation(duration: Double(self.selectedWorkout.secondsPerSet))
-						//self.recursiveAnimation(duration: Double(self.selectedWorkout.secondsPerSet), currentTime: 0, position: 0)
 						self.setLabel.isHidden = true
 						self.animation(duration: Double(self.selectedExercise.secondsPerSet))
 					})

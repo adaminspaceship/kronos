@@ -13,7 +13,7 @@ import UIKit
 class ExeciseSetsViewController: UIViewController, UITextFieldDelegate {
 	
 	
-	let nextWorkoutController = NextNewWorkoutViewController()
+//	let secondsOfRestViewController = secondsOfRestViewController()
 	
 	
 
@@ -30,7 +30,7 @@ class ExeciseSetsViewController: UIViewController, UITextFieldDelegate {
         setCount.layer.addSublayer(border)
         setCount.layer.masksToBounds = true
         self.hideKeyboardWhenTappedAround()
-		workoutNameField.becomeFirstResponder()
+		exerciseNameField.becomeFirstResponder()
 		
 		
     }
@@ -41,8 +41,9 @@ class ExeciseSetsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBOutlet weak var setCount: UITextField!
-    
-	@IBOutlet weak var workoutNameField: UITextField!
+	
+	@IBOutlet weak var exerciseNameField: UITextField!
+	
 
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
@@ -53,12 +54,12 @@ class ExeciseSetsViewController: UIViewController, UITextFieldDelegate {
 
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let RestWorkoutViewController = segue.destination as? RestWorkoutViewController {
-			RestWorkoutViewController.setCountLabel = Int(setCount.text!) ?? 3
-			if workoutNameField.text == "" {
-				RestWorkoutViewController.workoutName = "Untitled Exercise"
+		if let SecondsOfRestViewController = segue.destination as? SecondsOfRestViewController {
+			SecondsOfRestViewController.setCountLabel = Int(setCount.text!) ?? 3
+			if exerciseNameField.text == "" {
+				SecondsOfRestViewController.exerciseName = "Untitled Exercise"
 			} else {
-				RestWorkoutViewController.workoutName = workoutNameField.text!
+				SecondsOfRestViewController.exerciseName = exerciseNameField.text!
 			}
 			
 		}

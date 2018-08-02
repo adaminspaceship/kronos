@@ -1,5 +1,5 @@
 //
-//  NextNewWorkoutViewController.swift
+//  SecondsPerSetViewController.swift
 //  Kronos
 //
 //  Created by Adam Eliezerov on 24/07/2018.
@@ -9,19 +9,28 @@
 import UIKit
 import CoreData
 
-class NextNewWorkoutViewController: UIViewController {
+class SecondsPerSetViewController: UIViewController {
 	
 	var setCountLabel = Int()
-	var workoutName = String()
+	var exerciseName = String()
 	var secondsRest = Int()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		workoutNameField.text = workoutName
+		exerciseNameField.text = exerciseName
 		self.hideKeyboardWhenTappedAround()
 		secondsPerSetField.becomeFirstResponder()
+		
+		let border = CALayer()
+		let width = CGFloat(2.0)
+		border.borderColor = UIColor.darkGray.cgColor
+		border.frame = CGRect(x: 0, y: secondsPerSetField.frame.size.height - width, width: secondsPerSetField.frame.size.width, height: secondsPerSetField.frame.size.height)
+		
+		border.borderWidth = width
+		secondsPerSetField.layer.addSublayer(border)
+		secondsPerSetField.layer.masksToBounds = true
 		
     }
 	
@@ -35,7 +44,7 @@ class NextNewWorkoutViewController: UIViewController {
 	
 	@IBOutlet weak var secondsPerSetField: UITextField!
 	
-	@IBOutlet weak var workoutNameField: UITextField!
+	@IBOutlet weak var exerciseNameField: UITextField!
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,11 +55,11 @@ class NextNewWorkoutViewController: UIViewController {
     
 	@IBAction func doneButtonTapped(_ sender: Any) {
 
-		let workout = CoreDataHelper.newExercise()
-		workout.exerciseName = workoutName
-		workout.numberOfSets = Int32(setCountLabel)
-		workout.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
-		workout.restTime = Int32(secondsRest ?? 30) ?? 30
+		let exercise = CoreDataHelper.newExercise()
+		exercise.exerciseName = exerciseName
+		exercise.numberOfSets = Int32(setCountLabel)
+		exercise.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
+		exercise.restTime = Int32(secondsRest)
 		CoreDataHelper.saveExercise()
 		
 	}

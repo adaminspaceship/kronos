@@ -6,9 +6,9 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.adameliezerov.Kronos.newWorkout</string>
+			<string>com.adameliezerov.Kronos.newExercise</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>New Workout</string>
+			<string>New Exercise</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeAdd</string>
 		</dict>

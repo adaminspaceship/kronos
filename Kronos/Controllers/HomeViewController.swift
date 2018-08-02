@@ -26,6 +26,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		tableView.reloadData()
 		
 	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+		tableView.deselectRow(at: selectedIndexPath, animated: false)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

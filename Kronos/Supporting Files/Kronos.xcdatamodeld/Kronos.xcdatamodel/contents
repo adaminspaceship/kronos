@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="class">
-        <attribute name="exerciseName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="secondsPerSet" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
     <entity name="Workouts" representedClassName="Workouts" syncable="YES" codeGenerationType="class">
         <attribute name="exercises" optional="YES" attributeType="Transformable" customClassName="[Exercise]" syncable="YES"/>
         <attribute name="workoutName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exercise" positionX="-54" positionY="18" width="128" height="75"/>
         <element name="Workouts" positionX="-27" positionY="72" width="128" height="75"/>
     </elements>
 </model>

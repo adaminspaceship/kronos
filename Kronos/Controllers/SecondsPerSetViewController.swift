@@ -11,15 +11,14 @@ import CoreData
 
 class SecondsPerSetViewController: UIViewController {
 	
-	var setCountLabel = Int()
-	var exerciseName = String()
-	var secondsRest = Int()
+	var exercises = [String]()
 	
+	var currentIndexPath = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		//workout = CoreDataHelper.newWorkout()
         // Do any additional setup after loading the view.
-		exerciseNameField.text = exerciseName
+		exerciseNameField.text = exercises[currentIndexPath]
 		self.hideKeyboardWhenTappedAround()
 		secondsPerSetField.becomeFirstResponder()
 		
@@ -51,19 +50,24 @@ class SecondsPerSetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	
-    
+	//var workout = Workouts()
 	@IBAction func doneButtonTapped(_ sender: Any) {
-
-		let exercise = CoreDataHelper.newExercise()
-		exercise.exerciseName = exerciseName
-		exercise.numberOfSets = Int32(setCountLabel)
-		exercise.secondsPerSet = Int32(secondsPerSetField.text ?? "60") ?? 60
-		exercise.restTime = Int32(secondsRest)
-		CoreDataHelper.saveExercise()
+		let exercise = Exercise(exerciseName: exercises[currentIndexPath], secondsPerSet: Int(secondsPerSetField.text ?? "60") ?? 60)
+		//workout.exercises?.append(exercise)
+		if exercises.count == currentIndexPath {
+			print("done")
+		} else {
+			print("still not done")
+			currentIndexPath += 1
+		}
 		
 	}
-
-
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let AddExercisesViewController = segue.destination as? AddExercisesViewController {
+			AddExercisesViewController.currentIndexPath = currentIndexPath
+			AddExercisesViewController.exercises = exercises
+		}
+	}
 
 }

@@ -23,38 +23,6 @@ struct CoreDataHelper {
 		return context
 	}()
 	
-	// exercises
-	
-	static func newExercise() -> Exercise {
-		let exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as! Exercise
-		return exercise
-	}
-	
-	static func retrieveExercises() -> [Exercise] {
-		do {
-			let fetchRequest = NSFetchRequest<Exercise>(entityName: "Exercise")
-			let results = try context.fetch(fetchRequest)
-			
-			return results
-		} catch let error {
-			print("Could not fetch \(error.localizedDescription)")
-			
-			return []
-		}
-	}
-	static func saveExercise() {
-		do {
-			try context.save()
-		} catch let error {
-			print("Could not save \(error.localizedDescription)")
-		}
-	}
-	static func delete(exercise: Exercise) {
-		context.delete(exercise)
-		
-		saveExercise()
-	}
-	
 	// workouts
 	
 	static func newWorkout() -> Workouts {
@@ -84,7 +52,7 @@ struct CoreDataHelper {
 	static func delete(workouts: Workouts) {
 		context.delete(workouts)
 		
-		saveExercise()
+		saveWorkout()
 	}
 	
 }

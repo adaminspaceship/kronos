@@ -110,9 +110,6 @@
                     <navigationItem key="navigationItem" title="Exercises" id="PPd-xa-6wm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="equ-44-ZvS">
                             <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="f7E-TK-Lxz" kind="show" id="ydj-T7-fzS"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -295,7 +292,7 @@
         <!--Add Exercises View Controller-->
         <scene sceneID="haZ-jJ-3Js">
             <objects>
-                <viewController storyboardIdentifier="ExerciseSetsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6I-QH-ZXK" customClass="AddExercisesViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExercisesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6I-QH-ZXK" customClass="AddExercisesViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oZz-dk-80p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,6 +304,7 @@
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="D6I-QH-ZXK" eventType="touchUpInside" id="sRx-WP-CZX"/>
+                                    <segue destination="FCj-EO-nNr" kind="show" identifier="toSeconds" id="z6o-PX-UGt"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bub-pG-uT3">
@@ -378,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRC-MD-7XT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="1493"/>
+            <point key="canvasLocation" x="-784" y="617"/>
         </scene>
         <!--Seconds Per Set View Controller-->
         <scene sceneID="Mw4-fO-AjJ">
@@ -388,8 +386,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Workout" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLf-5Q-OTM">
-                                <rect key="frame" x="4" y="93" width="407" height="66"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Exercise" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLf-5Q-OTM">
+                                <rect key="frame" x="4" y="49" width="407" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="b5U-DM-R5F"/>
                                 </constraints>
@@ -398,7 +396,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="60" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGA-Vg-o7n">
-                                <rect key="frame" x="58" y="323" width="299" height="262"/>
+                                <rect key="frame" x="58" y="279" width="299" height="306"/>
                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
@@ -407,7 +405,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds per set?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-Ob-aQB">
-                                <rect key="frame" x="36" y="167" width="342" height="140"/>
+                                <rect key="frame" x="36" y="123" width="342" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="hoU-FZ-UFX"/>
                                 </constraints>
@@ -423,7 +421,7 @@
                                 <state key="normal" image="doneButton"/>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="FCj-EO-nNr" eventType="touchUpInside" id="iG0-WG-oDe"/>
-                                    <segue destination="VhD-xx-bQK" kind="show" id="aSj-uc-Gs6"/>
+                                    <segue destination="D6I-QH-ZXK" kind="show" id="7mU-ht-zYI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -451,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndL-e9-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="1493"/>
+            <point key="canvasLocation" x="-784" y="1493"/>
         </scene>
         <!--Seconds Of Rest View Controller-->
         <scene sceneID="Vyz-D1-kME">
@@ -462,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Untitled Workout" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fq-lZ-dK3">
-                                <rect key="frame" x="4" y="93" width="406" height="66"/>
+                                <rect key="frame" x="4" y="49" width="406" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="vDd-Ur-Z9Q"/>
                                 </constraints>
@@ -471,7 +469,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="30" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-cE-egY">
-                                <rect key="frame" x="58" y="318" width="298" height="262"/>
+                                <rect key="frame" x="58" y="274" width="298" height="306"/>
                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
@@ -487,12 +485,9 @@
                                 <state key="normal" image="nextButton">
                                     <color key="titleColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <segue destination="FCj-EO-nNr" kind="show" id="ziz-CA-BOC"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds of rest?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-1W-RuI">
-                                <rect key="frame" x="10" y="185" width="394" height="94"/>
+                                <rect key="frame" x="10" y="141" width="394" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="qWX-eA-VYa"/>
                                 </constraints>
@@ -525,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L35-nB-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="623"/>
+            <point key="canvasLocation" x="-784" y="2266"/>
         </scene>
         <!--Home-->
         <scene sceneID="cfQ-ra-TdC">
@@ -564,7 +559,4 @@
         <image name="nextButton" width="179" height="45"/>
         <image name="startButton" width="179" height="45"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="aSj-uc-Gs6"/>
-    </inferredMetricsTieBreakers>
 </document>

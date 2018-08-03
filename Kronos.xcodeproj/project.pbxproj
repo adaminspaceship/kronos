@@ -18,10 +18,10 @@
 		99776BE3211234C9005B9C63 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BE0211234C8005B9C63 /* background@3x.png */; };
 		99776BE4211234C9005B9C63 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BE1211234C8005B9C63 /* background.png */; };
 		99A978A92113A790002E8A4F /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A978A82113A790002E8A4F /* ExerciseTableViewCell.swift */; };
+		99A978AE2113BF5C002E8A4F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A978AD2113BF5C002E8A4F /* Exercise.swift */; };
 		99AB76B82113969000FC94A2 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */; };
 		99AB76BA211396BA00FC94A2 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB76B9211396BA00FC94A2 /* WorkoutTableViewCell.swift */; };
 		99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */; };
-		99D3B57C2110E12A00BC391A /* SecondsOfRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3B57B2110E12A00BC391A /* SecondsOfRestViewController.swift */; };
 		99D80D2521064A1000716921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D2421064A1000716921 /* AppDelegate.swift */; };
 		99D80D2A21064A1000716921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2821064A1000716921 /* Main.storyboard */; };
 		99D80D2C21064A1100716921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2B21064A1100716921 /* Assets.xcassets */; };
@@ -29,7 +29,6 @@
 		99D80D3A21064A1100716921 /* KronosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D3921064A1100716921 /* KronosTests.swift */; };
 		99D80D4521064A1100716921 /* KronosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D4421064A1100716921 /* KronosUITests.swift */; };
 		99E324EC21068F1E00BB3CC2 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */; };
-		99E324EE2107C83B00BB3CC2 /* ExeciseSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324ED2107C83B00BB3CC2 /* ExeciseSetsViewController.swift */; };
 		99E324F32107CBC800BB3CC2 /* SecondsPerSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */; };
 		99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E0210A84B000798833 /* UIView+Extension.swift */; };
 		99F514E4210B720100798833 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E3210B720100798833 /* Constants.swift */; };
@@ -72,10 +71,10 @@
 		99776BE0211234C8005B9C63 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
 		99776BE1211234C8005B9C63 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		99A978A82113A790002E8A4F /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		99A978AD2113BF5C002E8A4F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		99AB76B9211396BA00FC94A2 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		99D3B5792110DCC400BC391A /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
-		99D3B57B2110E12A00BC391A /* SecondsOfRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondsOfRestViewController.swift; path = Kronos/Controllers/SecondsOfRestViewController.swift; sourceTree = SOURCE_ROOT; };
 		99D80D2121064A1000716921 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D80D2421064A1000716921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D80D2921064A1000716921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,7 +88,6 @@
 		99D80D4421064A1100716921 /* KronosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KronosUITests.swift; sourceTree = "<group>"; };
 		99D80D4621064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
-		99E324ED2107C83B00BB3CC2 /* ExeciseSetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExeciseSetsViewController.swift; sourceTree = "<group>"; };
 		99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsPerSetViewController.swift; sourceTree = "<group>"; };
 		99F514E0210A84B000798833 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		99F514E3210B720100798833 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -144,6 +142,7 @@
 		99AF336421081E1A00593D18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				99A978AD2113BF5C002E8A4F /* Exercise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,12 +215,10 @@
 		99E324EF2107C92300BB3CC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */,
 				99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */,
 				9924204D2108F2BD00148D38 /* HomeViewController.swift */,
 				99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */,
-				99E324ED2107C83B00BB3CC2 /* ExeciseSetsViewController.swift */,
-				99D3B57B2110E12A00BC391A /* SecondsOfRestViewController.swift */,
+				9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */,
 				99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */,
 			);
 			path = Controllers;
@@ -496,12 +493,11 @@
 				99E324F32107CBC800BB3CC2 /* SecondsPerSetViewController.swift in Sources */,
 				992420502108F4FE00148D38 /* TableViewCell.swift in Sources */,
 				99AB76B82113969000FC94A2 /* WorkoutsViewController.swift in Sources */,
-				99D3B57C2110E12A00BC391A /* SecondsOfRestViewController.swift in Sources */,
+				99A978AE2113BF5C002E8A4F /* Exercise.swift in Sources */,
 				99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */,
 				99AB76BA211396BA00FC94A2 /* WorkoutTableViewCell.swift in Sources */,
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,
-				99E324EE2107C83B00BB3CC2 /* ExeciseSetsViewController.swift in Sources */,
 				99F514E4210B720100798833 /* Constants.swift in Sources */,
 				99E324EC21068F1E00BB3CC2 /* OtherViewController.swift in Sources */,
 				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,

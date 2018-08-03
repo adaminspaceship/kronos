@@ -12,7 +12,8 @@ import CoreData
 
 class AddExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
-	var exercises = ["Untitled Exercise"]
+	var exercises = [String]()
+	var currentIndexPath = Int()
 	
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -33,6 +34,8 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 		}
 	}
 	
+
+	
 	
 
     override func viewDidLoad() {
@@ -41,10 +44,23 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
         // Do any additional setup after loading the view.
     }
 
+	override func viewDidAppear(_ animated: Bool) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let SecondsPerSetViewController = storyboard.instantiateViewController(withIdentifier: "SecondsPerSetViewController") as! SecondsPerSetViewController
+		if currentIndexPath < exercises.count {
+			self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)
+		} else if exercises.count == 0{
+			return
+		} else {
+			print("done setting...")
+		}
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	
 	
 	@IBOutlet weak var addExerciseButton: SpringButton!
 	
@@ -57,16 +73,28 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 		self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
 		
 	}
+	
 	@IBAction func doneButtonTapped(_ sender: Any) {
+		exercises = []
+		for cell in tableView.visibleCells as! Array<ExerciseTableViewCell> {
+			exercises.append(cell.exerciseNameField.text!)
+		}
+//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//		let SecondsPerSetViewController = storyboard.instantiateViewController(withIdentifier: "SecondsPerSetViewController") as! SecondsPerSetViewController
+//		SecondsPerSetViewController.exerciseName = exercises[0]
+//		self.present(SecondsPerSetViewController, animated: true, completion: nil)
+		viewDidAppear(true)
+		//tryThings()
+		self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)
+		
 	}
-	/*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if let SecondsPerSetViewController = segue.destination as? SecondsPerSetViewController {
+			SecondsPerSetViewController.currentIndexPath = currentIndexPath
+			SecondsPerSetViewController.exercises = exercises
+		}
+	}
 
 }

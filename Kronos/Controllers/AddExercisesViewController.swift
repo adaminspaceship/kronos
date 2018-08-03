@@ -13,7 +13,8 @@ import CoreData
 class AddExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
 	var exercises = [String]()
-	var currentIndexPath = Int()
+	var workoutName = String()
+	var restSeconds = Int()
 	
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -35,9 +36,6 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 	}
 	
 
-	
-	
-
     override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.rowHeight = 80
@@ -45,15 +43,7 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
     }
 
 	override func viewDidAppear(_ animated: Bool) {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let SecondsPerSetViewController = storyboard.instantiateViewController(withIdentifier: "SecondsPerSetViewController") as! SecondsPerSetViewController
-		if currentIndexPath < exercises.count {
-			self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)
-		} else if exercises.count == 0{
-			return
-		} else {
-			print("done setting...")
-		}
+		//let exercise = Exercise(exerciseName: exercises[currentIndexPath], secondsPerSet: Int(secondsPerSetField.text ?? "60") ?? 60)
 	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,7 +61,6 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 		self.tableView.endUpdates()
 		let indexPath = IndexPath(row: self.exercises.count-1, section: 0)
 		self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-		
 	}
 	
 	@IBAction func doneButtonTapped(_ sender: Any) {
@@ -79,22 +68,14 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 		for cell in tableView.visibleCells as! Array<ExerciseTableViewCell> {
 			exercises.append(cell.exerciseNameField.text!)
 		}
-//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//		let SecondsPerSetViewController = storyboard.instantiateViewController(withIdentifier: "SecondsPerSetViewController") as! SecondsPerSetViewController
-//		SecondsPerSetViewController.exerciseName = exercises[0]
-//		self.present(SecondsPerSetViewController, animated: true, completion: nil)
 		viewDidAppear(true)
-		//tryThings()
 		self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)
-		
 	}
-	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
 		if let SecondsPerSetViewController = segue.destination as? SecondsPerSetViewController {
-			SecondsPerSetViewController.currentIndexPath = currentIndexPath
 			SecondsPerSetViewController.exercises = exercises
+			SecondsPerSetViewController.workoutName = workoutName
+			SecondsPerSetViewController.restSeconds = restSeconds
 		}
 	}
-
 }

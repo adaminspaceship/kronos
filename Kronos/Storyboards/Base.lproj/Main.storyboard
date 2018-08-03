@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D6I-QH-ZXK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f7E-TK-Lxz">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -376,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRC-MD-7XT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784" y="617"/>
+            <point key="canvasLocation" x="-1007" y="1123"/>
         </scene>
         <!--Seconds Per Set View Controller-->
         <scene sceneID="Mw4-fO-AjJ">
@@ -421,7 +421,6 @@
                                 <state key="normal" image="doneButton"/>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="FCj-EO-nNr" eventType="touchUpInside" id="iG0-WG-oDe"/>
-                                    <segue destination="D6I-QH-ZXK" kind="show" id="7mU-ht-zYI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -449,12 +448,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndL-e9-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784" y="1493"/>
+            <point key="canvasLocation" x="141" y="1123"/>
         </scene>
-        <!--Seconds Of Rest View Controller-->
+        <!--New Workout View Controller-->
         <scene sceneID="Vyz-D1-kME">
             <objects>
-                <viewController id="f7E-TK-Lxz" customClass="SecondsOfRestViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f7E-TK-Lxz" customClass="NewWorkoutViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjp-Sg-r5M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,9 +472,6 @@
                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="180"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
-                                <connections>
-                                    <outlet property="delegate" destination="f7E-TK-Lxz" id="bYE-Uu-GOd"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAc-Rb-uHC">
                                 <rect key="frame" x="117.66666666666669" y="661" width="179" height="45"/>
@@ -485,8 +481,12 @@
                                 <state key="normal" image="nextButton">
                                     <color key="titleColor" red="0.93991710689999997" green="0.93442051559999995" blue="0.94541369819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="f7E-TK-Lxz" eventType="touchUpInside" id="v1V-cA-i7O"/>
+                                    <segue destination="D6I-QH-ZXK" kind="show" id="Rgj-nX-THS"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds of rest?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-1W-RuI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many seconds of rest after every set?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5Q-1W-RuI">
                                 <rect key="frame" x="10" y="141" width="394" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="qWX-eA-VYa"/>
@@ -514,13 +514,13 @@
                         <viewLayoutGuide key="safeArea" id="7iE-FL-tVw"/>
                     </view>
                     <connections>
-                        <outlet property="exerciseNameField" destination="5fq-lZ-dK3" id="4Xs-sF-lQf"/>
-                        <outlet property="restSecondsField" destination="nzU-cE-egY" id="sgV-G4-o5O"/>
+                        <outlet property="restSecondsField" destination="nzU-cE-egY" id="6Ta-bq-GJu"/>
+                        <outlet property="workoutNameField" destination="5fq-lZ-dK3" id="NYs-fK-R8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L35-nB-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784" y="2266"/>
+            <point key="canvasLocation" x="-1914" y="1123"/>
         </scene>
         <!--Home-->
         <scene sceneID="cfQ-ra-TdC">

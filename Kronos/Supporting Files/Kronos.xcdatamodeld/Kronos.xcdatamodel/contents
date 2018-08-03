@@ -2,9 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Workouts" representedClassName="Workouts" syncable="YES" codeGenerationType="class">
         <attribute name="exercises" optional="YES" attributeType="Transformable" customClassName="[Exercise]" syncable="YES"/>
+        <attribute name="restSeconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="workoutName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Workouts" positionX="-27" positionY="72" width="128" height="75"/>
+        <element name="Workouts" positionX="-27" positionY="72" width="128" height="90"/>
     </elements>
 </model>

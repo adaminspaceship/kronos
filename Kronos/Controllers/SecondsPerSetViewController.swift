@@ -12,13 +12,18 @@ import CoreData
 class SecondsPerSetViewController: UIViewController {
 	
 	var exercises = [String]()
+	var currentExerciseIndex = 0
+	var workoutName = String()
+	var restSeconds = Int()
+	var exercisesArray = [Exercise]()
 	
-	var currentIndexPath = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
 		//workout = CoreDataHelper.newWorkout()
         // Do any additional setup after loading the view.
-		exerciseNameField.text = exercises[currentIndexPath]
+		exerciseNameField.text = exercises[currentExerciseIndex]
+		currentExerciseIndex += 1
+		
 		self.hideKeyboardWhenTappedAround()
 		secondsPerSetField.becomeFirstResponder()
 		
@@ -51,23 +56,30 @@ class SecondsPerSetViewController: UIViewController {
     }
 	
 	//var workout = Workouts()
-	@IBAction func doneButtonTapped(_ sender: Any) {
-		let exercise = Exercise(exerciseName: exercises[currentIndexPath], secondsPerSet: Int(secondsPerSetField.text ?? "60") ?? 60)
-		//workout.exercises?.append(exercise)
-		if exercises.count == currentIndexPath {
-			print("done")
-		} else {
-			print("still not done")
-			currentIndexPath += 1
-		}
-		
-	}
 	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let AddExercisesViewController = segue.destination as? AddExercisesViewController {
-			AddExercisesViewController.currentIndexPath = currentIndexPath
-			AddExercisesViewController.exercises = exercises
+	
+	@IBAction func doneButtonTapped(_ sender: Any) {
+		print(currentExerciseIndex)
+		if exercises.count <= currentExerciseIndex {
+			// done
+			let secondsField = Int(secondsPerSetField.text!)
+			exercisesArray.append(Exercise(entity: exerciseNameField.text!, insertInto: secondsField ?? 60))
+			print("Workout Name: \(workoutName), Rest Seconds: \(restSeconds)")
+			let workout = CoreDataHelper.newWorkout()
+			workout.exercises = exercisesArray
+			workout.workoutName = workoutName
+			workout.restSeconds = Int16(restSeconds)
+			CoreDataHelper.saveWorkout()
+		} else {
+			// still not finished
+			let secondsField = Int(secondsPerSetField.text!)
+			exercisesArray.append(Exercise(entity: exerciseNameField.text, insertInto: secondsField ?? 60))
+			exerciseNameField.text = exercises[currentExerciseIndex]
+			secondsPerSetField.text = ""
+			secondsPerSetField.becomeFirstResponder()
 		}
+		currentExerciseIndex += 1
 	}
+
 
 }

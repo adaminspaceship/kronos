@@ -13,6 +13,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	
 	var workouts = [Workouts]()
 	var selectedWorkout = String()
+	let defaults = UserDefaults.standard
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return workouts.count
@@ -35,7 +36,12 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	override func viewDidLoad() {
         super.viewDidLoad()
 		workouts = CoreDataHelper.retrieveWorkouts()
-        // Do any additional setup after loading the view.
+		for a in workouts {
+			print(defaults.dictionary(forKey: a.workoutName!))
+			print(a.restSeconds)
+			print(a.workoutName)
+		}
+		
 		
     }
 	

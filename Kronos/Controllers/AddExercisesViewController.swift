@@ -67,6 +67,7 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 		exercises = []
 		for cell in tableView.visibleCells as! Array<ExerciseTableViewCell> {
 			exercises.append(cell.exerciseNameField.text!)
+			print("appended: \(cell.exerciseNameField.text!) to exercises")
 		}
 		viewDidAppear(true)
 		self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)

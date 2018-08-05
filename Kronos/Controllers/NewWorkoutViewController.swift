@@ -14,12 +14,7 @@ class NewWorkoutViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		let workouts = CoreDataHelper.retrieveWorkouts()
-		for a in workouts {
-			print(defaults.dictionary(forKey: a.workoutName!))
-			print(a.restSeconds)
-			print(a.workoutName)
-		}
+
         // Do any additional setup after loading the view.
     }
 	@IBOutlet weak var workoutNameField: UITextField!

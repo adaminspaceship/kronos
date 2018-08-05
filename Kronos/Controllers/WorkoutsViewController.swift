@@ -8,10 +8,11 @@
 
 import UIKit
 import CoreData
+
 class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var workouts = [Workouts]()
-	
+	var selectedWorkout = String()
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return workouts.count
@@ -24,15 +25,17 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		selectedWorkout = workouts[indexPath.row].workoutName!
+		self.performSegue(withIdentifier: Constants.segue.toExercises, sender: self)
+	}
+	
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		workouts = CoreDataHelper.retrieveWorkouts()
         // Do any additional setup after loading the view.
-		let newWorkout = CoreDataHelper.newWorkout()
-		newWorkout.workoutName = "Core"
-		CoreDataHelper.saveWorkout()
 		
     }
 	
@@ -42,14 +45,18 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
     }
      
 	
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		if let HomeViewController = segue.destination as? HomeViewController {
+			HomeViewController.selectedWorkout = selectedWorkout
+		}
+
     }
-    */
+
 
 }

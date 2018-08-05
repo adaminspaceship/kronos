@@ -10,11 +10,13 @@ import UIKit
 
 class NewWorkoutViewController: UIViewController {
 
+	let defaults = UserDefaults.standard
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		let workouts = CoreDataHelper.retrieveWorkouts()
 		for a in workouts {
-			print(a.exercises?[0].exerciseName)
+			print(defaults.dictionary(forKey: a.workoutName!))
 			print(a.restSeconds)
 			print(a.workoutName)
 		}

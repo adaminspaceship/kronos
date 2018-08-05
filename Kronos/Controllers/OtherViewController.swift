@@ -14,11 +14,11 @@
 //
 //class OtherViewController: UIViewController, UITextFieldDelegate {
 //	//var selectedExercise = Exercise()
-//	
+//
 //    var ringProgressView = RingProgressView()
 //	let setLabel = SpringLabel(frame: CGRect(x: 0, y: 0, width: 240, height: 100))
 //	let UIColorArray = [UIColor.red,UIColor.blue,UIColor.cyan,UIColor.green,UIColor.magenta,UIColor.purple]
-//	
+//
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        ringProgressView = RingProgressView(frame: CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-200, width: 350, height: 350))
@@ -45,24 +45,24 @@
 //        ringProgressView.shadowOpacity = 0
 //		DispatchQueue.main.async {
 //			self.view.addSubview(self.ringProgressView)
-//			
+//
 //		}
-//		
-//		
+//
+//
 //    }
-//    
+//
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
-//		
+//
 //    }
 //	@IBOutlet weak var countdownLabel: SpringLabel!
 //	@IBOutlet weak var twoLabel: SpringLabel!
-//	
+//
 //	@IBOutlet weak var oneLabel: SpringLabel!
-//	
+//
 //	var started = false
 //	@IBAction func startButton(_ sender: Any) {
-//		
+//
 //		if started == false {
 //			countdownLabel.animation = "squeezeDown"
 //			countdownLabel.duration = 1.5
@@ -80,21 +80,21 @@
 //						self.setLabel.isHidden = true
 //						self.animation(duration: Double(self.selectedExercise.secondsPerSet))
 //					})
-//					
+//
 //				})
 //			}
 //		} else {
-//			
+//
 //		}
 //	}
-//	
-//	
-//	
+//
+//
+//
 //	var setsCompleted = 1
 //	var counter: Double = 0
 //	var didCompleteExercise = false
-//	
-//	
+//
+//
 //    func animation(duration: Double) {
 //        UIView.animate(withDuration: TimeInterval(duration/20*10),delay: 0,options: .curveLinear , animations: {
 //            self.ringProgressView.progress = 0.25
@@ -107,7 +107,7 @@
 //                }) {(f) in
 //                    UIView.animate(withDuration: TimeInterval(duration/20*4),delay: 0,options: .curveLinear, animations: {
 //                        self.ringProgressView.progress = 1.0
-//						
+//
 //					}, completion: {(finished:Bool) in
 //						self.setLabel.duration = CGFloat(self.selectedExercise.restTime)
 //						self.setLabel.isHidden = false
@@ -138,15 +138,15 @@
 //                }
 //            }
 //        }
-//		
+//
 //    }
-//	
-//	
+//
+//
 //	func restAnimation() {
 //		UIView.animate(withDuration: TimeInterval(selectedExercise.restTime)) {
 //			self.ringProgressView.progress = 0.0
 //		}
 //	}
-//	
-//    
+//
+//
 //}

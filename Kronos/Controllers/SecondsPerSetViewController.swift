@@ -15,7 +15,6 @@ class SecondsPerSetViewController: UIViewController {
 	var currentExerciseIndex = 0
 	var workoutName = String()
 	var restSeconds = Int()
-	var exercisesArray = [Exercise]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +56,27 @@ class SecondsPerSetViewController: UIViewController {
 	
 	//var workout = Workouts()
 	
+	let defaults = UserDefaults.standard
+	var totalExercises = [String:Int]()
+	
 	
 	@IBAction func doneButtonTapped(_ sender: Any) {
 		print(currentExerciseIndex)
 		if exercises.count <= currentExerciseIndex {
 			// done
-			let secondsField = Int(secondsPerSetField.text!)
-			exercisesArray.append(Exercise(entity: exerciseNameField.text!, insertInto: secondsField ?? 60))
+			let secondsField = Int(secondsPerSetField.text ?? "60")
+			totalExercises[exerciseNameField.text ?? "Untitled Exercise"] = secondsField
+			//exercisesArray.append(Exercise)
 			print("Workout Name: \(workoutName), Rest Seconds: \(restSeconds)")
 			let workout = CoreDataHelper.newWorkout()
-			workout.exercises = exercisesArray
 			workout.workoutName = workoutName
+			defaults.set(totalExercises, forKey: workoutName)
 			workout.restSeconds = Int16(restSeconds)
 			CoreDataHelper.saveWorkout()
 		} else {
 			// still not finished
 			let secondsField = Int(secondsPerSetField.text!)
-			exercisesArray.append(Exercise(entity: exerciseNameField.text, insertInto: secondsField ?? 60))
+			totalExercises[exerciseNameField.text ?? "Untitled Exercise"] = secondsField
 			exerciseNameField.text = exercises[currentExerciseIndex]
 			secondsPerSetField.text = ""
 			secondsPerSetField.becomeFirstResponder()

@@ -36,5 +36,4 @@ class TableViewCell: UITableViewCell {
 	@IBOutlet weak var secondLabel: UILabel!
 	@IBOutlet weak var backgroundCardView: UIView!
 	
-	@IBOutlet weak var numberOfSetsLabel: UILabel!
 }

@@ -12,7 +12,7 @@ import CoreData
 
 class AddExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
-	var exercises = [String]()
+	var exercises = ["Untitled Exercise"]
 	var workoutName = String()
 	var restSeconds = Int()
 	
@@ -39,6 +39,8 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.rowHeight = 80
+
+		self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 
@@ -70,7 +72,6 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 			print("appended: \(cell.exerciseNameField.text!) to exercises")
 		}
 		viewDidAppear(true)
-		self.performSegue(withIdentifier: Constants.segue.toSeconds, sender: self)
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let SecondsPerSetViewController = segue.destination as? SecondsPerSetViewController {

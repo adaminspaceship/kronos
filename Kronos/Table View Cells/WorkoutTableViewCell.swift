@@ -26,9 +26,14 @@ class WorkoutTableViewCell: UITableViewCell {
 	@IBOutlet weak var workoutNameLabel: UILabel!
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+		super.setSelected(selected, animated: animated)
+		if selected == true {
+			self.backgroundCardView.backgroundColor = UIColor.gray
+		} else {
+			self.backgroundCardView.backgroundColor = UIColor.white
+		}
+		
+		// Configure the view for the selected state
+	}
 
 }

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+	@IBOutlet weak var tableView: UITableView!
 	
 	var workouts = [Workouts]()
 	var selectedWorkout = String()
@@ -36,6 +37,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	override func viewDidLoad() {
         super.viewDidLoad()
 		workouts = CoreDataHelper.retrieveWorkouts()
+		tableView.rowHeight = 80
 		for a in workouts {
 			print(defaults.dictionary(forKey: a.workoutName!))
 			print(a.restSeconds)

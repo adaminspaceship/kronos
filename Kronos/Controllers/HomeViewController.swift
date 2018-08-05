@@ -46,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	}
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-		let key = [String](exercisesForSelectedWorkout.keys)[indexPath.section]
+		let key = [String](exercisesForSelectedWorkout.keys)[indexPath.row]
 		let value = exercisesForSelectedWorkout[key]
 		cell.exerciseLabel.text = key
 		cell.secondLabel.text = "\(value ?? 60) seconds"

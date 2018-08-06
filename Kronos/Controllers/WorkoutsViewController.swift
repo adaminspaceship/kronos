@@ -14,6 +14,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	
 	var workouts = [Workouts]()
 	var selectedWorkout = String()
+	var selectedWorkoutRestTime = Int()
 	let defaults = UserDefaults.standard
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +30,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		selectedWorkout = workouts[indexPath.row].workoutName!
+		selectedWorkoutRestTime = Int(workouts[indexPath.row].restSeconds)
 		self.performSegue(withIdentifier: Constants.segue.toExercises, sender: self)
 	}
 	
@@ -36,8 +38,8 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		workouts = CoreDataHelper.retrieveWorkouts()
 		tableView.rowHeight = 80
+		workouts = CoreDataHelper.retrieveWorkouts()
 		for a in workouts {
 			print(defaults.dictionary(forKey: a.workoutName!))
 			print(a.restSeconds)
@@ -62,6 +64,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
         // Pass the selected object to the new view controller.
 		if let HomeViewController = segue.destination as? HomeViewController {
 			HomeViewController.selectedWorkout = selectedWorkout
+			HomeViewController.selectedWorkoutRestTime = selectedWorkoutRestTime
 		}
 
     }

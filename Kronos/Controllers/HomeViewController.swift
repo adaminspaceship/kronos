@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	var selectedWorkout = String()
 	var exercisesForSelectedWorkout = [String:Int]()
 	let userDefaults = UserDefaults.standard
+	var selectedWorkoutRestTime = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	}
 	
 	
+	@IBAction func startWorkoutButtonTapped(_ sender: Any) {
+		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
+	}
 	
 	override func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
@@ -52,17 +56,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		cell.secondLabel.text = "\(value ?? 60) seconds"
 		return cell
 	}
-	
-	var selectedExercise = String()
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let key = [String](exercisesForSelectedWorkout.keys)[indexPath.section]
-		let value = exercisesForSelectedWorkout[key]
-		selectedExercise = key
-		print("Exercise selected: \(key), seconds per set: \(value ?? 60)")
-		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
 
-	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return true
@@ -70,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			let key = [String](exercisesForSelectedWorkout.keys)[indexPath.section]
+			let key = [String](exercisesForSelectedWorkout.keys)[indexPath.row]
 			exercisesForSelectedWorkout.removeValue(forKey: key)
 			userDefaults.set(exercisesForSelectedWorkout, forKey: key)
 			userDefaults.synchronize()
@@ -78,12 +72,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		}
 	}
 
-//
-//	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//		if let OtherViewController = segue.destination as? OtherViewController {
-//			OtherViewController.selectedExercise = selectedExercise
-//		}
-//	}
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let OtherViewController = segue.destination as? TimerViewController {
+			OtherViewController.selectedWorkout = selectedWorkout
+			OtherViewController.selectedWorkoutRestTime = selectedWorkoutRestTime
+			OtherViewController.selectedExercises = exercisesForSelectedWorkout
+		}
+
+	}
+
 
 
 

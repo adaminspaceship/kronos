@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="-1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g29-tz-9F6">
-                                <rect key="frame" x="0.0" y="113" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="495"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.94117647059999998" green="0.93333333330000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.52106726169999995" green="0.24050712590000001" blue="0.68248951440000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,10 +92,18 @@
                                     <outlet property="delegate" destination="LhH-Mz-EnH" id="O4S-e4-RmC"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-Tq-58Q">
+                                <rect key="frame" x="0.0" y="607" width="414" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="startWorkoutButton"/>
+                                <connections>
+                                    <action selector="startWorkoutButtonTapped:" destination="LhH-Mz-EnH" eventType="touchUpInside" id="icV-9W-XqM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="g29-tz-9F6" firstAttribute="bottom" secondItem="nET-fj-Q8j" secondAttribute="bottom" id="ChB-TP-0U7"/>
+                            <constraint firstItem="g29-tz-9F6" firstAttribute="bottom" secondItem="nET-fj-Q8j" secondAttribute="bottom" constant="-128" id="ChB-TP-0U7"/>
                             <constraint firstAttribute="trailing" secondItem="g29-tz-9F6" secondAttribute="trailing" id="DRi-vg-WI1"/>
                             <constraint firstItem="g29-tz-9F6" firstAttribute="top" secondItem="nET-fj-Q8j" secondAttribute="top" constant="49" id="Dpk-d0-wlO"/>
                             <constraint firstItem="g29-tz-9F6" firstAttribute="leading" secondItem="f0c-bg-Nic" secondAttribute="leading" id="DyM-Gb-mCd"/>
@@ -116,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="-399.45652173913044"/>
         </scene>
-        <!--Other View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="Hgq-q6-t0T">
             <objects>
-                <viewController id="niS-mp-V5T" customClass="OtherViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="niS-mp-V5T" customClass="TimerViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3n-JO-ZMS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,5 +577,6 @@
         <image name="medal" width="22" height="23"/>
         <image name="nextButton" width="179" height="45"/>
         <image name="startButton" width="179" height="45"/>
+        <image name="startWorkoutButton" width="179" height="45"/>
     </resources>
 </document>

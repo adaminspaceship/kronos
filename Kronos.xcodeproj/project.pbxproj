@@ -28,7 +28,7 @@
 		99D80D2F21064A1100716921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D80D2D21064A1100716921 /* LaunchScreen.storyboard */; };
 		99D80D3A21064A1100716921 /* KronosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D3921064A1100716921 /* KronosTests.swift */; };
 		99D80D4521064A1100716921 /* KronosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D4421064A1100716921 /* KronosUITests.swift */; };
-		99E324EC21068F1E00BB3CC2 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */; };
+		99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */; };
 		99E324F32107CBC800BB3CC2 /* SecondsPerSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */; };
 		99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E0210A84B000798833 /* UIView+Extension.swift */; };
 		99F514E4210B720100798833 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E3210B720100798833 /* Constants.swift */; };
@@ -87,7 +87,7 @@
 		99D80D4021064A1100716921 /* KronosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KronosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D80D4421064A1100716921 /* KronosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KronosUITests.swift; sourceTree = "<group>"; };
 		99D80D4621064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsPerSetViewController.swift; sourceTree = "<group>"; };
 		99F514E0210A84B000798833 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		99F514E3210B720100798833 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			children = (
 				99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */,
 				9924204D2108F2BD00148D38 /* HomeViewController.swift */,
-				99E324EB21068F1E00BB3CC2 /* OtherViewController.swift */,
+				99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */,
 				99A978AF2114EFFD002E8A4F /* NewWorkoutViewController.swift */,
 				9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */,
 				99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */,
@@ -498,7 +498,7 @@
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,
 				99F514E4210B720100798833 /* Constants.swift in Sources */,
-				99E324EC21068F1E00BB3CC2 /* OtherViewController.swift in Sources */,
+				99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */,
 				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,
 				99A978B02114EFFD002E8A4F /* NewWorkoutViewController.swift in Sources */,
 				9924204E2108F2BD00148D38 /* HomeViewController.swift in Sources */,

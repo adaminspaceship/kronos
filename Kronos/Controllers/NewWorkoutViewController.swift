@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewWorkoutViewController: UIViewController {
+class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 
 	let defaults = UserDefaults.standard
 	
@@ -16,6 +16,8 @@ class NewWorkoutViewController: UIViewController {
         super.viewDidLoad()
 		self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+		workoutNameField.delegate = self
+		addDoneButtonOnKeyboard()
     }
 	@IBOutlet weak var workoutNameField: UITextField!
 	@IBOutlet weak var restSecondsField: UITextField!
@@ -27,6 +29,41 @@ class NewWorkoutViewController: UIViewController {
     
 	@IBAction func nextButtonTapped(_ sender: Any) {
 		
+	}
+	
+	
+	func addDoneButtonOnKeyboard() {
+		let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+		doneToolbar.barStyle       = UIBarStyle.default
+		let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+		let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(doneButtonAction))
+		
+		var items = [UIBarButtonItem]()
+		items.append(flexSpace)
+		items.append(done)
+		
+		doneToolbar.items = items
+		doneToolbar.sizeToFit()
+		
+		self.restSecondsField.inputAccessoryView = doneToolbar
+	}
+	
+	@objc func doneButtonAction() {
+		self.restSecondsField.resignFirstResponder()
+		print("Tapped Done, seguing to add exercises")
+		self.performSegue(withIdentifier: Constants.segue.toAddExercises, sender: self)
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		let nextTag = textField.tag + 1
+		
+		if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+			nextResponder.becomeFirstResponder()
+		} else {
+			textField.resignFirstResponder()
+		}
+		
+		return true
 	}
 	
 	

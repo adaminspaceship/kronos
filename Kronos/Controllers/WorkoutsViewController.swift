@@ -32,13 +32,14 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 		selectedWorkout = workouts[indexPath.row].workoutName!
 		selectedWorkoutRestTime = Int(workouts[indexPath.row].restSeconds)
 		self.performSegue(withIdentifier: Constants.segue.toExercises, sender: self)
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		//tableView.rowHeight = 80
+		tableView.rowHeight = 80
 		workouts = CoreDataHelper.retrieveWorkouts()
 		for a in workouts {
 			print(defaults.dictionary(forKey: a.workoutName!))

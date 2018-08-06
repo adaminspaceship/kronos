@@ -73,13 +73,13 @@ class SecondsPerSetViewController: UIViewController {
 			defaults.set(totalExercises, forKey: workoutName)
 			workout.restSeconds = Int16(restSeconds)
 			CoreDataHelper.saveWorkout()
+			self.performSegue(withIdentifier: Constants.segue.toHome, sender: self)
 		} else {
 			// still not finished
 			let secondsField = Int(secondsPerSetField.text!)
 			totalExercises[exerciseNameField.text ?? "Untitled Exercise"] = secondsField
 			exerciseNameField.text = exercises[currentExerciseIndex]
 			secondsPerSetField.text = ""
-			secondsPerSetField.becomeFirstResponder()
 		}
 		currentExerciseIndex += 1
 	}

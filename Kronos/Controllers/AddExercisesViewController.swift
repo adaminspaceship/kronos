@@ -10,7 +10,7 @@ import UIKit
 import Spring
 import CoreData
 
-class AddExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 	
 	var exercises = ["Untitled Exercise"]
 	var workoutName = String()
@@ -25,6 +25,8 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ExerciseTableViewCell
 		cell.exerciseNameField.placeholder = exercises[indexPath.row]
+		cell.exerciseNameField.tag = indexPath.row
+		cell.exerciseNameField.delegate = self
 		return cell
 	}
 	
@@ -39,7 +41,7 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.rowHeight = 80
-
+		
 		self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
@@ -51,6 +53,22 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		let nextTag = textField.tag + 1
+		
+		if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+			nextResponder.becomeFirstResponder()
+			addExerciseButtonTapped(self)
+			print("tapped")
+		} else {
+			addExerciseButtonTapped(self)
+			print("tapped")
+//			.becomeFirstResponder()
+		}
+		
+		return true
+	}
 	
 	
 	

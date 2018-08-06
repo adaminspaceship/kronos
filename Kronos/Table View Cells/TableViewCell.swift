@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
 		//contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
-		backgroundCardView.layer.cornerRadius = 3.0
+		backgroundCardView.layer.cornerRadius = 25
 		backgroundCardView.layer.masksToBounds = false
 		
 		backgroundCardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor

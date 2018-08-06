@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		if editingStyle == .delete {
 			let key = [String](exercisesForSelectedWorkout.keys)[indexPath.row]
 			exercisesForSelectedWorkout.removeValue(forKey: key)
-			userDefaults.set(exercisesForSelectedWorkout, forKey: key)
+			userDefaults.set(exercisesForSelectedWorkout, forKey: selectedWorkout)
 			userDefaults.synchronize()
 			tableView.reloadData()
 		}

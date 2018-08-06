@@ -13,7 +13,7 @@ class WorkoutTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-		backgroundCardView.layer.cornerRadius = 3.0
+		backgroundCardView.layer.cornerRadius = 25
 		backgroundCardView.layer.masksToBounds = false
 		
 		backgroundCardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor

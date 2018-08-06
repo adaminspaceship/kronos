@@ -17,5 +17,7 @@ struct Constants {
 		static let toExercises = "toExercises"
 		static let toNew = "toNew"
 		static let toSeconds = "toSeconds"
+		static let toHome = "toHome"
+		static let toAddExercises = "toAddExercises"
 	}
 }

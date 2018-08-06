@@ -38,7 +38,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		tableView.rowHeight = 80
+		//tableView.rowHeight = 80
 		workouts = CoreDataHelper.retrieveWorkouts()
 		for a in workouts {
 			print(defaults.dictionary(forKey: a.workoutName!))

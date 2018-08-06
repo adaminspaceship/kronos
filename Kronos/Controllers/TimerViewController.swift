@@ -14,6 +14,7 @@ import Spring
 
 class TimerViewController: UIViewController, UITextFieldDelegate {
 	
+	@IBOutlet weak var navBarTitle: UINavigationItem!
 	
 	var selectedExercises = [String:Int]()
 	var selectedWorkout = String()
@@ -65,8 +66,7 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 			}
 			
 		} else {
-			
-			//no more excercises
+			 setLabel.text = "done"
 		}
 	}
 
@@ -81,16 +81,40 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 	var started = false
 	@IBAction func startButton(_ sender: Any) {
 		
-		startWorkout()
+	if started == false {
+			countdownLabel.animation = "squeezeDown"
+			countdownLabel.duration = 1.5
+			countdownLabel.animateNext {
+				self.countdownLabel.isHidden = true
+				self.twoLabel.animation = "squeezeDown"
+				self.twoLabel.duration = 1.5
+				self.twoLabel.animateNext(completion: {
+					self.twoLabel.isHidden = true
+					self.oneLabel.animation = "squeezeDown"
+					self.oneLabel.duration = 1.3
+					self.oneLabel.animate()
+					self.oneLabel.animateNext(completion: {
+						self.oneLabel.isHidden = true
+						self.setLabel.isHidden = true
+						self.startWorkout()
+					})
+
+				})
+			}
+		} else {
+		
+	}
+		
 	}
 
 
 
-	var setsCompleted = 0
+	var setsCompleted = 1
 	var didCompleteExercise = false
 
 
 	func animation(duration: Double,exerciseName: String, completion: @escaping () -> Void) {
+		navBarTitle.title = exerciseName
 		print("duration: \(duration), exercise name: \(exerciseName)")
 		UIView.animate(withDuration: TimeInterval(selectedWorkoutRestTime), delay: 0, options: .curveEaseIn, animations: {
 			self.ringProgressView.progress = 0
@@ -117,8 +141,6 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 						} else {
 							self.restAnimation()
 						}
-//						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/\(self.selectedExercise.numberOfSets)"
-//						print("Get Ready For Set: \(self.setsCompleted+1)/\(self.selectedExercise.numberOfSets)")
 						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/3"
 						print("Get Ready For Set: \(self.setsCompleted+1)/3")
 						self.setLabel.animateToNext(completion: {
@@ -132,10 +154,11 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 								if self.didCompleteExercise == false {
 									self.didCompleteExercise = true
 									self.animation(duration: duration, exerciseName: exerciseName, completion: completion)
+									self.setLabel.text = "Done \(exerciseName)"
 								} else {
 									self.setLabel.isHidden = false
 									self.setLabel.text = "Done \(exerciseName)"
-									self.setsCompleted = 0
+									self.setsCompleted = 1
 									self.didCompleteExercise = false
 									completion()
 								}

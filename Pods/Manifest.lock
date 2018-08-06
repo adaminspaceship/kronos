@@ -1,18 +1,27 @@
 PODS:
+  - AutoInsetter (1.2.4)
   - MKRingProgressView (2.0.1)
+  - Pageboy (2.5.2)
   - Spring (1.0.5)
+  - Tabman (1.9.1):
+    - AutoInsetter (~> 1.2.0)
+    - Pageboy (~> 2.5.0)
   - TransitionButton (0.4.0)
   - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
   - MKRingProgressView
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - Tabman (~> 1.0)
   - TransitionButton
   - UIColor_Hex_Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AutoInsetter
     - MKRingProgressView
+    - Pageboy
+    - Tabman
     - TransitionButton
     - UIColor_Hex_Swift
 
@@ -26,11 +35,14 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  AutoInsetter: 00cbcc6c56e9294169222b3e29fb336db7181156
   MKRingProgressView: a2adeddfff0ea03f0fb7f8b108f3f77176db3bb5
+  Pageboy: dd62a213a5cfb9cf3f97a0845e8703c0b8377a9a
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  Tabman: e867a8e3fc72a30cc694aca51a2b331070f5e3ba
   TransitionButton: d271030914c84a00b54b4d983446944d2875e7ba
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: b46b14baed5757fe6d52d848b73e06f76926f6e8
+PODFILE CHECKSUM: db054227e7c785ea2db570a18de53fc70009e833
 
 COCOAPODS: 1.5.3

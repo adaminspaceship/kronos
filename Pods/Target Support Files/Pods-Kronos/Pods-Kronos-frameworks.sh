@@ -143,14 +143,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spring/Spring.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spring/Spring.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework"
 fi

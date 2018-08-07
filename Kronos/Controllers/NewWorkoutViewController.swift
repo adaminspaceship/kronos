@@ -18,9 +18,13 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
 		workoutNameField.delegate = self
 		addDoneButtonOnKeyboard()
+		iconButton.imageView?.layer.cornerRadius = buttonView.frame.width/2
+		buttonView.layer.cornerRadius = buttonView.frame.width/2
     }
+	@IBOutlet weak var buttonView: UIView!
 	@IBOutlet weak var workoutNameField: UITextField!
 	@IBOutlet weak var restSecondsField: UITextField!
+	@IBOutlet weak var iconButton: UIButton!
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,6 +35,9 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 		
 	}
 	
+	@IBAction func iconButtonTapped(_ sender: Any) {
+		print("tapped")
+	}
 	
 	func addDoneButtonOnKeyboard() {
 		let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))

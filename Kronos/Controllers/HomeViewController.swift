@@ -71,6 +71,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 			tableView.reloadData()
 		}
 	}
+	
+	func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+		let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+			// delete item at indexPath
+		}
+
+		
+//		delete.backgroundColor = UIColor(hex: "ECEEF1")
+//		delete.
+		return [delete]
+	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let OtherViewController = segue.destination as? TimerViewController {

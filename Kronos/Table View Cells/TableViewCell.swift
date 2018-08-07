@@ -19,7 +19,7 @@ class TableViewCell: UITableViewCell {
 		
 		backgroundCardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
 		backgroundCardView.layer.shadowOpacity = 0.8
-		backgroundCardView.layer.shadowOffset = CGSize(width: 0, height: 0)
+		backgroundCardView.layer.shadowOffset = CGSize(width: 1.5, height: 3)
     }
 	@IBOutlet weak var exerciseLabel: UILabel!
 	

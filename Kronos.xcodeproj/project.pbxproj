@@ -32,6 +32,8 @@
 		99D80D4521064A1100716921 /* KronosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D80D4421064A1100716921 /* KronosUITests.swift */; };
 		99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */; };
 		99E324F32107CBC800BB3CC2 /* SecondsPerSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */; };
+		99EE5E5421192D7E003E504C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE5E5321192D7E003E504C /* CollectionViewCell.swift */; };
+		99EE5E5621192DC6003E504C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE5E5521192DC6003E504C /* CollectionViewController.swift */; };
 		99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E0210A84B000798833 /* UIView+Extension.swift */; };
 		99F514E4210B720100798833 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F514E3210B720100798833 /* Constants.swift */; };
 		D0DAB9DEE1CA44F47266ACA0 /* Pods_KronosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F4BD832340890A09385CBF /* Pods_KronosTests.framework */; };
@@ -93,6 +95,8 @@
 		99D80D4621064A1100716921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsPerSetViewController.swift; sourceTree = "<group>"; };
+		99EE5E5321192D7E003E504C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = "Kronos/Table View Cells/CollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		99EE5E5521192DC6003E504C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		99F514E0210A84B000798833 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		99F514E3210B720100798833 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,7 @@
 		99AB76BB211396C000FC94A2 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				99EE5E5321192D7E003E504C /* CollectionViewCell.swift */,
 				99A978A82113A790002E8A4F /* ExerciseTableViewCell.swift */,
 				9924204F2108F4FE00148D38 /* TableViewCell.swift */,
 				99AB76B9211396BA00FC94A2 /* WorkoutTableViewCell.swift */,
@@ -219,6 +224,7 @@
 		99E324EF2107C92300BB3CC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				99EE5E5521192DC6003E504C /* CollectionViewController.swift */,
 				99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */,
 				9924204D2108F2BD00148D38 /* HomeViewController.swift */,
 				99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */,
@@ -502,6 +508,7 @@
 			files = (
 				9972F66E2113A63C00CE6E7C /* AddExercisesViewController.swift in Sources */,
 				99A978A92113A790002E8A4F /* ExerciseTableViewCell.swift in Sources */,
+				99EE5E5421192D7E003E504C /* CollectionViewCell.swift in Sources */,
 				99E324F32107CBC800BB3CC2 /* SecondsPerSetViewController.swift in Sources */,
 				992420502108F4FE00148D38 /* TableViewCell.swift in Sources */,
 				99AB76B82113969000FC94A2 /* WorkoutsViewController.swift in Sources */,
@@ -511,6 +518,7 @@
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
 				993C63E02118DA0900056A48 /* MainTabViewController.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,
+				99EE5E5621192DC6003E504C /* CollectionViewController.swift in Sources */,
 				99F514E4210B720100798833 /* Constants.swift in Sources */,
 				99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */,
 				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,

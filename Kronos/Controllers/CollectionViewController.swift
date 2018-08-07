@@ -63,9 +63,18 @@ class CollectionViewController: UICollectionViewController {
 		cell.iconImage.image = UIImage(named: iconsArray[indexPath.row])
 		//cell.backgroundColor = UIColor.black
         // Configure the cell
-    
+		cell.button.tag = indexPath.row
+		cell.button.addTarget(self,
+							  action: #selector(tappedOnIcon),
+							  for: .touchUpInside)
+		
 		return cell
     }
+	
+	@objc func tappedOnIcon(sender: UIButton) {
+		print(sender.tag)
+		print(iconsArray[sender.tag])
+	}
 
     // MARK: UICollectionViewDelegate
 

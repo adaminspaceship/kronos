@@ -25,6 +25,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 		let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell") as! WorkoutTableViewCell
 		let workout = workouts[indexPath.row]
 		cell.workoutNameLabel.text = workout.workoutName
+		cell.workoutIconImage.image = UIImage(named: workout.workoutIcon ?? "dumbbell")
 		return cell
 	}
 	
@@ -45,6 +46,7 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 			print(defaults.dictionary(forKey: a.workoutName!))
 			print(a.restSeconds)
 			print(a.workoutName)
+			print(a.workoutIcon ?? "")
 		}
 		
 		

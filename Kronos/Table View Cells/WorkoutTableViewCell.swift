@@ -22,6 +22,7 @@ class WorkoutTableViewCell: UITableViewCell {
 		
     }
 	@IBOutlet weak var backgroundCardView: UIView!
+	@IBOutlet weak var workoutIconImage: UIImageView!
 	
 	@IBOutlet weak var workoutNameLabel: UILabel!
 	

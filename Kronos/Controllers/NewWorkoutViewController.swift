@@ -11,6 +11,7 @@ import UIKit
 class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 
 	let defaults = UserDefaults.standard
+	var imagePicked = "dumbbell"
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 		addDoneButtonOnKeyboard()
 		iconButton.imageView?.layer.cornerRadius = buttonView.frame.width/2
 		buttonView.layer.cornerRadius = buttonView.frame.width/2
+		buttonView.layer.borderWidth = 1
+		buttonView.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 1).cgColor
     }
 	@IBOutlet weak var buttonView: UIView!
 	@IBOutlet weak var workoutNameField: UITextField!
@@ -32,7 +35,8 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
 	@IBAction func nextButtonTapped(_ sender: Any) {
-		
+		print("Tapped Next, seguing to add exercises")
+		self.performSegue(withIdentifier: Constants.segue.toAddExercises, sender: self)
 	}
 	
 	@IBAction func iconButtonTapped(_ sender: Any) {
@@ -78,6 +82,8 @@ class NewWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if let AddExercisesViewController = segue.destination as? AddExercisesViewController {
 			AddExercisesViewController.restSeconds = Int(restSecondsField.text ?? "60") ?? 60
 			AddExercisesViewController.workoutName = workoutNameField.text ?? "Untitled Workout"
+			AddExercisesViewController.imagePicked = imagePicked
+			
 		}
     }
 

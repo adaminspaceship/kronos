@@ -13,6 +13,8 @@ private let reuseIdentifier = "cell"
 class CollectionViewController: UICollectionViewController {
 	
 	let iconsArray = ["attack","acrobatics","barbell","bodybuilder","crossfit","curls-with-dumbbells","dumbbell","foot-angle","gym","gymnastics","jog-forward","jog-reverse","jump-rope","mommy-fitness","parkour","personal-trainer","pilates","prenatal-yoga","running-person","skateboard","spinning","treadmill","walking-simulation","warm-up","workout-2","workout-3","workout","yoga"]
+	
+	var selectedCell = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +76,15 @@ class CollectionViewController: UICollectionViewController {
 	@objc func tappedOnIcon(sender: UIButton) {
 		print(sender.tag)
 		print(iconsArray[sender.tag])
+		selectedCell = iconsArray[sender.tag]
+		self.performSegue(withIdentifier: Constants.segue.backToNewWorkout, sender: self)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let NewWorkoutViewController = segue.destination as? NewWorkoutViewController {
+			NewWorkoutViewController.iconButton.setImage(UIImage(named: selectedCell), for: .normal)
+			NewWorkoutViewController.imagePicked = selectedCell
+		}
 	}
 
     // MARK: UICollectionViewDelegate

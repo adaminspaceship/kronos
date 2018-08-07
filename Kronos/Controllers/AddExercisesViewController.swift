@@ -15,6 +15,7 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 	var exercises = ["Untitled Exercise"]
 	var workoutName = String()
 	var restSeconds = Int()
+	var imagePicked = String()
 	
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -96,6 +97,7 @@ class AddExercisesViewController: UIViewController, UITableViewDataSource, UITab
 			SecondsPerSetViewController.exercises = exercises
 			SecondsPerSetViewController.workoutName = workoutName
 			SecondsPerSetViewController.restSeconds = restSeconds
+			SecondsPerSetViewController.imagePicked = imagePicked
 		}
 	}
 }

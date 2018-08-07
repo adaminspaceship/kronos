@@ -15,7 +15,7 @@ class SecondsPerSetViewController: UIViewController {
 	var currentExerciseIndex = 0
 	var workoutName = String()
 	var restSeconds = Int()
-	
+	var imagePicked = String()
     override func viewDidLoad() {
         super.viewDidLoad()
 		//workout = CoreDataHelper.newWorkout()
@@ -72,6 +72,7 @@ class SecondsPerSetViewController: UIViewController {
 			workout.workoutName = workoutName
 			defaults.set(totalExercises, forKey: workoutName)
 			workout.restSeconds = Int16(restSeconds)
+			workout.workoutIcon = imagePicked
 			CoreDataHelper.saveWorkout()
 			self.performSegue(withIdentifier: Constants.segue.toHome, sender: self)
 		} else {

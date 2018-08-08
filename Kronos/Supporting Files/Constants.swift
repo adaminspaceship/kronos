@@ -22,3 +22,4 @@ struct Constants {
 		static let backToNewWorkout = "backToNewWorkout"
 	}
 }
+

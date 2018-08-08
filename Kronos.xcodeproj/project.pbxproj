@@ -10,10 +10,9 @@
 		233979738CBC75BB895079DF /* Pods_KronosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEBD48E60D2133234D3B8DA /* Pods_KronosUITests.framework */; };
 		68A8ACDE59F97F13F4C3321D /* Pods_Kronos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3936D797434DE72A04D376AD /* Pods_Kronos.framework */; };
 		9924204C2108E68600148D38 /* Kronos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9924204A2108E68600148D38 /* Kronos.xcdatamodeld */; };
-		9924204E2108F2BD00148D38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204D2108F2BD00148D38 /* HomeViewController.swift */; };
+		9924204E2108F2BD00148D38 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204D2108F2BD00148D38 /* ExercisesViewController.swift */; };
 		992420502108F4FE00148D38 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204F2108F4FE00148D38 /* TableViewCell.swift */; };
 		992420522109251800148D38 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992420512109251800148D38 /* CoreDataHelper.swift */; };
-		993C63E02118DA0900056A48 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C63DF2118DA0900056A48 /* MainTabViewController.swift */; };
 		993C63ED2118E71F00056A48 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C63EC2118E71F00056A48 /* MainNavigationViewController.swift */; };
 		9972F66E2113A63C00CE6E7C /* AddExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */; };
 		99776BE2211234C9005B9C63 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BDF211234C8005B9C63 /* background@2x.png */; };
@@ -67,10 +66,9 @@
 		7048364AB978303D7D8B37E1 /* Pods-KronosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KronosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KronosUITests/Pods-KronosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91F4BD832340890A09385CBF /* Pods_KronosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KronosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9924204B2108E68600148D38 /* Kronos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kronos.xcdatamodel; sourceTree = "<group>"; };
-		9924204D2108F2BD00148D38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9924204D2108F2BD00148D38 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		9924204F2108F4FE00148D38 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		992420512109251800148D38 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		993C63DF2118DA0900056A48 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		993C63EC2118E71F00056A48 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercisesViewController.swift; sourceTree = "<group>"; };
 		99776BDF211234C8005B9C63 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
@@ -224,14 +222,13 @@
 		99E324EF2107C92300BB3CC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				99EE5E5521192DC6003E504C /* CollectionViewController.swift */,
 				99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */,
-				9924204D2108F2BD00148D38 /* HomeViewController.swift */,
+				9924204D2108F2BD00148D38 /* ExercisesViewController.swift */,
 				99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */,
 				99A978AF2114EFFD002E8A4F /* NewWorkoutViewController.swift */,
 				9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */,
 				99E324F22107CBC800BB3CC2 /* SecondsPerSetViewController.swift */,
-				993C63DF2118DA0900056A48 /* MainTabViewController.swift */,
+				99EE5E5521192DC6003E504C /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,14 +513,13 @@
 				99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */,
 				99AB76BA211396BA00FC94A2 /* WorkoutTableViewCell.swift in Sources */,
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
-				993C63E02118DA0900056A48 /* MainTabViewController.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,
 				99EE5E5621192DC6003E504C /* CollectionViewController.swift in Sources */,
 				99F514E4210B720100798833 /* Constants.swift in Sources */,
 				99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */,
 				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,
 				99A978B02114EFFD002E8A4F /* NewWorkoutViewController.swift in Sources */,
-				9924204E2108F2BD00148D38 /* HomeViewController.swift in Sources */,
+				9924204E2108F2BD00148D38 /* ExercisesViewController.swift in Sources */,
 				9924204C2108E68600148D38 /* Kronos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +694,7 @@
 			baseConfigurationReference = 55F19679565A3EF51699DF36 /* Pods-Kronos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z28CSUK723;
 				INFOPLIST_FILE = "$(SRCROOT)/Kronos/Supporting Files/Info.plist";
@@ -707,8 +704,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.Kronos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -717,6 +715,7 @@
 			baseConfigurationReference = 5478D6FEFCBC396E32198432 /* Pods-Kronos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z28CSUK723;
 				INFOPLIST_FILE = "$(SRCROOT)/Kronos/Supporting Files/Info.plist";
@@ -726,8 +725,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adameliezerov.Kronos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

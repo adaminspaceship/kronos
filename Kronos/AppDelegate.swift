@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
 		let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "NewWorkoutViewController") as UIViewController
+		let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "NewWorkoutViewController") as! NewWorkoutViewController
 		self.window?.rootViewController?.present(vc, animated: false, completion: nil)
 	}
 	

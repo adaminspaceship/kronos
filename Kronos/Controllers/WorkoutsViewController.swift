@@ -18,11 +18,13 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	let defaults = UserDefaults.standard
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		workouts = CoreDataHelper.retrieveWorkouts()
 		return workouts.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell") as! WorkoutTableViewCell
+		
 		let workout = workouts[indexPath.row]
 		cell.workoutNameLabel.text = workout.workoutName
 		cell.workoutIconImage.image = UIImage(named: workout.workoutIcon ?? "dumbbell")
@@ -36,12 +38,19 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			CoreDataHelper.delete(workouts: workouts[indexPath.row])
+			tableView.reloadData()
+		}
+	}
+	
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.rowHeight = 80
-		workouts = CoreDataHelper.retrieveWorkouts()
+		
 		for a in workouts {
 			print(defaults.dictionary(forKey: a.workoutName!))
 			print(a.restSeconds)
@@ -65,9 +74,9 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-		if let HomeViewController = segue.destination as? HomeViewController {
-			HomeViewController.selectedWorkout = selectedWorkout
-			HomeViewController.selectedWorkoutRestTime = selectedWorkoutRestTime
+		if let ExercisesViewController = segue.destination as? ExercisesViewController {
+			ExercisesViewController.selectedWorkout = selectedWorkout
+			ExercisesViewController.selectedWorkoutRestTime = selectedWorkoutRestTime
 		}
 
     }

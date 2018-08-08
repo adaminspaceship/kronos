@@ -26,13 +26,13 @@ class SecondsPerSetViewController: UIViewController {
 		self.hideKeyboardWhenTappedAround()
 		secondsPerSetField.becomeFirstResponder()
 		
-		let border = CALayer()
-		let width = CGFloat(2.0)
-		border.borderColor = UIColor.darkGray.cgColor
-		border.frame = CGRect(x: 0, y: secondsPerSetField.frame.size.height - width, width: secondsPerSetField.frame.size.width, height: secondsPerSetField.frame.size.height)
-		
-		border.borderWidth = width
-		secondsPerSetField.layer.addSublayer(border)
+//		let border = CALayer()
+//		let width = CGFloat(2.0)
+//		border.borderColor = UIColor.darkGray.cgColor
+//		border.frame = CGRect(x: 0, y: secondsPerSetField.frame.size.height - width, width: secondsPerSetField.frame.size.width, height: secondsPerSetField.frame.size.height)
+//		
+//		border.borderWidth = width
+//		secondsPerSetField.layer.addSublayer(border)
 		secondsPerSetField.layer.masksToBounds = true
 		
     }

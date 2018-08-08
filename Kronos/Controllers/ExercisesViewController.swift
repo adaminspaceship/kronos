@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ExercisesViewController.swift
 //  Kronos
 //
 //  Created by Adam Eliezerov on 25/07/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ExercisesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
 	var selectedWorkout = String()
 	var exercisesForSelectedWorkout = [String:Int]()
@@ -30,7 +30,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	
 	@IBAction func startWorkoutButtonTapped(_ sender: Any) {
 		self.performSegue(withIdentifier: Constants.segue.toOther, sender: self)
+		
 	}
+	
 	
 	override func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
@@ -70,17 +72,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 			userDefaults.synchronize()
 			tableView.reloadData()
 		}
-	}
-	
-	func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-		let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-			// delete item at indexPath
-		}
-
-		
-//		delete.backgroundColor = UIColor(hex: "ECEEF1")
-//		delete.
-		return [delete]
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

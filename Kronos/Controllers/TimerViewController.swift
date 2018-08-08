@@ -25,12 +25,14 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		presentAlert()
+		startButton.isHidden = false
         ringProgressView = RingProgressView(frame: CGRect(x: view.frame.size.width/2-175, y: view.frame.size.height/2-200, width: 350, height: 350))
 		countdownLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		twoLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		oneLabel.center = CGPoint(x: view.bounds.size.width/2, y: ringProgressView.bounds.size.height/2+100)
 		//set label
-		setLabel.center = CGPoint(x: view.center.x, y: 105)
+		setLabel.center = CGPoint(x: view.center.x, y: view.center.y)
 		setLabel.textAlignment = .center
 		setLabel.textColor = UIColor(hex: "474747")
 		setLabel.font = UIFont.systemFont(ofSize: 30, weight: .regular)
@@ -55,6 +57,22 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 
     }
 	
+	var setsSelected = 3
+	
+	func presentAlert() {
+		let alert = UIAlertController(title: "How Many Sets?", message: "", preferredStyle: .alert)
+		
+		alert.addTextField { (textField) in
+			textField.text = "3"
+		}
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+			let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+			self.setsSelected = Int((textField?.text) ?? "3") ?? 3
+		}))
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	
 	func startWorkout() {
 		if let excerciseKeyValuePair = selectedExercises.first {
 			let exerciseName = excerciseKeyValuePair.key
@@ -66,7 +84,7 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 			}
 			
 		} else {
-			 setLabel.text = "done"
+			 setLabel.text = "Done!"
 		}
 	}
 
@@ -77,10 +95,12 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var countdownLabel: SpringLabel!
 	@IBOutlet weak var twoLabel: SpringLabel!
 	@IBOutlet weak var oneLabel: SpringLabel!
-
+	@IBOutlet weak var startButton: UIButton!
+	
 	var started = false
 	@IBAction func startButton(_ sender: Any) {
-		
+	
+	startButton.isHidden = true
 	if started == false {
 			countdownLabel.animation = "squeezeDown"
 			countdownLabel.duration = 1.5
@@ -119,8 +139,6 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 		UIView.animate(withDuration: TimeInterval(selectedWorkoutRestTime), delay: 0, options: .curveEaseIn, animations: {
 			self.ringProgressView.progress = 0
 		}) { (n) in
-			
-		
         UIView.animate(withDuration: TimeInterval(duration/20*10),delay: 0,options: .curveLinear , animations: {
             self.ringProgressView.progress = 0.25
         }) { (hello) in
@@ -136,17 +154,15 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 						self.setLabel.duration = CGFloat(self.selectedWorkoutRestTime)
 						self.setLabel.isHidden = false
 						if self.didCompleteExercise == true {
-							self.setLabel.text = "Done"
-							
+							self.setLabel.text = "Done!"
 						} else {
 							self.restAnimation()
 						}
-						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/3"
-						print("Get Ready For Set: \(self.setsCompleted+1)/3")
+						self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/\(self.setsSelected)"
+						print("Get Ready For Set: \(self.setsCompleted+1)/\(self.setsSelected)")
 						self.setLabel.animateToNext(completion: {
 							self.setLabel.isHidden = true
-//							if self.setsCompleted < self.selectedExercise.numberOfSets-1 {
-							if self.setsCompleted <= 1 {
+							if self.setsCompleted < self.setsSelected {
 								self.setsCompleted += 1
 								self.animation(duration: duration, exerciseName: exerciseName, completion: completion)
 								
@@ -154,10 +170,10 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 								if self.didCompleteExercise == false {
 									self.didCompleteExercise = true
 									self.animation(duration: duration, exerciseName: exerciseName, completion: completion)
-									self.setLabel.text = "Done \(exerciseName)"
+									self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/\(self.setsSelected)"
 								} else {
 									self.setLabel.isHidden = false
-									self.setLabel.text = "Done \(exerciseName)"
+									self.setLabel.text = "Rest... Get Ready For Set: \(self.setsCompleted+1)/\(self.setsSelected)"
 									self.setsCompleted = 1
 									self.didCompleteExercise = false
 									completion()
@@ -176,6 +192,7 @@ class TimerViewController: UIViewController, UITextFieldDelegate {
 	func restAnimation() {
 		UIView.animate(withDuration: TimeInterval(selectedWorkoutRestTime)) {
 			self.ringProgressView.progress = 0.0
+			print(self.selectedWorkoutRestTime)
 		}
 	}
 

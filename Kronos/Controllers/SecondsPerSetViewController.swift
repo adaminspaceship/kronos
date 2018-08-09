@@ -11,7 +11,7 @@ import CoreData
 
 class SecondsPerSetViewController: UIViewController {
 	
-	var exercises = [String]()
+	var exercises = [String]() 
 	var currentExerciseIndex = 0
 	var workoutName = String()
 	var restSeconds = Int()
@@ -30,7 +30,7 @@ class SecondsPerSetViewController: UIViewController {
 //		let width = CGFloat(2.0)
 //		border.borderColor = UIColor.darkGray.cgColor
 //		border.frame = CGRect(x: 0, y: secondsPerSetField.frame.size.height - width, width: secondsPerSetField.frame.size.width, height: secondsPerSetField.frame.size.height)
-//		
+//
 //		border.borderWidth = width
 //		secondsPerSetField.layer.addSublayer(border)
 		secondsPerSetField.layer.masksToBounds = true

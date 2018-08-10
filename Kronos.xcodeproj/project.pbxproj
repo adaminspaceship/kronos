@@ -14,6 +14,8 @@
 		992420502108F4FE00148D38 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924204F2108F4FE00148D38 /* TableViewCell.swift */; };
 		992420522109251800148D38 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992420512109251800148D38 /* CoreDataHelper.swift */; };
 		993C63ED2118E71F00056A48 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C63EC2118E71F00056A48 /* MainNavigationViewController.swift */; };
+		9954837A211E09110031EB98 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99548379211E09110031EB98 /* SettingsTableViewController.swift */; };
+		9954837C211E1BBF0031EB98 /* ThirdPartySoftwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954837B211E1BBF0031EB98 /* ThirdPartySoftwareViewController.swift */; };
 		9972F66E2113A63C00CE6E7C /* AddExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */; };
 		99776BE2211234C9005B9C63 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BDF211234C8005B9C63 /* background@2x.png */; };
 		99776BE3211234C9005B9C63 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99776BE0211234C8005B9C63 /* background@3x.png */; };
@@ -70,6 +72,8 @@
 		9924204F2108F4FE00148D38 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		992420512109251800148D38 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		993C63EC2118E71F00056A48 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		99548379211E09110031EB98 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		9954837B211E1BBF0031EB98 /* ThirdPartySoftwareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartySoftwareViewController.swift; sourceTree = "<group>"; };
 		9972F66D2113A63C00CE6E7C /* AddExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercisesViewController.swift; sourceTree = "<group>"; };
 		99776BDF211234C8005B9C63 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		99776BE0211234C8005B9C63 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 		99E324EF2107C92300BB3CC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9954837B211E1BBF0031EB98 /* ThirdPartySoftwareViewController.swift */,
+				99548379211E09110031EB98 /* SettingsTableViewController.swift */,
 				99AB76B72113969000FC94A2 /* WorkoutsViewController.swift */,
 				9924204D2108F2BD00148D38 /* ExercisesViewController.swift */,
 				99E324EB21068F1E00BB3CC2 /* TimerViewController.swift */,
@@ -513,12 +519,14 @@
 				99D3B57A2110DCC400BC391A /* Storyboard+Extension.swift in Sources */,
 				99AB76BA211396BA00FC94A2 /* WorkoutTableViewCell.swift in Sources */,
 				992420522109251800148D38 /* CoreDataHelper.swift in Sources */,
+				9954837C211E1BBF0031EB98 /* ThirdPartySoftwareViewController.swift in Sources */,
 				99F514E1210A84B000798833 /* UIView+Extension.swift in Sources */,
 				99EE5E5621192DC6003E504C /* CollectionViewController.swift in Sources */,
 				99F514E4210B720100798833 /* Constants.swift in Sources */,
 				99E324EC21068F1E00BB3CC2 /* TimerViewController.swift in Sources */,
 				99D80D2521064A1000716921 /* AppDelegate.swift in Sources */,
 				99A978B02114EFFD002E8A4F /* NewWorkoutViewController.swift in Sources */,
+				9954837A211E09110031EB98 /* SettingsTableViewController.swift in Sources */,
 				9924204E2108F2BD00148D38 /* ExercisesViewController.swift in Sources */,
 				9924204C2108E68600148D38 /* Kronos.xcdatamodeld in Sources */,
 			);

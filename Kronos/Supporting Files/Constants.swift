@@ -14,7 +14,7 @@ struct Constants {
 	
 	struct segue {
 		static let toOther = "toOther"
-		static let toExercises = "toExercises"
+		static let toTimer = "toTimer"
 		static let toNew = "toNew"
 		static let toSeconds = "toSeconds"
 		static let toHome = "toHome"

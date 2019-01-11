@@ -13,28 +13,33 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 	@IBOutlet weak var tableView: UITableView!
 	
 	var workouts = [Workouts]()
-	var selectedWorkout = String()
-	var selectedWorkoutRestTime = Int()
-	let defaults = UserDefaults.standard
+	@IBOutlet weak var noTimerLabel: UILabel!
+	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		workouts = CoreDataHelper.retrieveWorkouts()
+		if workouts.count == 0 {
+			self.noTimerLabel.isHidden = false
+		}
 		return workouts.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell") as! WorkoutTableViewCell
-		
 		let workout = workouts[indexPath.row]
 		cell.workoutNameLabel.text = workout.workoutName
+		print(workout.timeSeconds)
 		cell.workoutIconImage.image = UIImage(named: workout.workoutIcon ?? "dumbbell")
 		return cell
 	}
-	
+
+	var selectedWorkoutName = String()
+	var selectedWorkoutTime = Int16()
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		selectedWorkout = workouts[indexPath.row].workoutName!
-		selectedWorkoutRestTime = Int(workouts[indexPath.row].restSeconds)
-		self.performSegue(withIdentifier: Constants.segue.toExercises, sender: self)
+		let selectedWorkout = workouts[indexPath.row]
+		selectedWorkoutName = selectedWorkout.workoutName!
+		selectedWorkoutTime = selectedWorkout.timeSeconds
+		self.performSegue(withIdentifier: Constants.segue.toTimer, sender: self)
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
@@ -52,9 +57,8 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
 		tableView.rowHeight = 80
 		
 		for a in workouts {
-			print(defaults.dictionary(forKey: a.workoutName!))
-			print(a.restSeconds)
-			print(a.workoutName)
+			print(a.timeSeconds)
+			print(a.workoutName!)
 			print(a.workoutIcon ?? "")
 		}
 		
@@ -65,21 +69,12 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-     
 	
-	
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-		if let ExercisesViewController = segue.destination as? ExercisesViewController {
-			ExercisesViewController.selectedWorkout = selectedWorkout
-			ExercisesViewController.selectedWorkoutRestTime = selectedWorkoutRestTime
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let TimerViewController = segue.destination as? TimerViewController {
+			TimerViewController.secondsTime = selectedWorkoutTime
+			TimerViewController.selectedWorkoutName = selectedWorkoutName
 		}
-
-    }
-
+	}
 
 }
